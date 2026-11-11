@@ -1,0 +1,5 @@
+STACK orderer_containers=16 committer_containers=6
+== mn44_usdc_fs_rtt0_r300 exit=0
+EPR STATS successes=17262 steady_goodput=286.7 whole_goodput=279.6 lat_ms_p50=100.1 lat_ms_p90=811.7 lat_ms_p99=2956.9 lat_ms_mean=301.8
+GOODPUT label=mn44_usdc_fs_rtt0_r300 processed=17792/151045 success=17071 failed=721 elapsed_s=60.0 goodput_tps=284.5
+STATE str_keys=48806 statuses=1:17265,3:101836

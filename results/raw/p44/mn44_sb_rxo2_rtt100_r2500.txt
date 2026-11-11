@@ -1,0 +1,5 @@
+STACK orderer_containers=16 committer_containers=6
+== mn44_sb_rxo2_rtt100_r2500 exit=0
+EPR STATS successes=59335 steady_goodput=1811.2 whole_goodput=1942.8 lat_ms_p50=3079.4 lat_ms_p90=7911.0 lat_ms_p99=29043.5 lat_ms_mean=5429.0
+GOODPUT label=mn44_sb_rxo2_rtt100_r2500 processed=55105/60000 success=54440 failed=665 elapsed_s=32.0 goodput_tps=1701.1
+STATE str_keys=200000 statuses=1:59338,3:29812

@@ -1,0 +1,258 @@
+== fppck_sb1.0 exit=0
+Replay complete: 5302 successful, 698 failed, 0 skipped out of 0 total transfers
+EPR STATS successes=5302 steady_goodput=175.9 whole_goodput=177.1 lat_ms_p50=112.5 lat_ms_p90=195.3 lat_ms_p99=215.4 lat_ms_mean=114.1
+GOODPUT label=fppck_sb1.0 processed=5981/60000 success=5284 failed=697 elapsed_s=30.0 goodput_tps=176.1
+STATECHECK(label words total highbytes raw_deltas empty committed): fppck_sb1.0 0 0 0 0 0 5306
+SBCHECK(label balances overdrawn raw_encoded): fppck_sb1.0 200000 0 0
+2026-10-11 06:49:47.095 UTC 001e INFO [dependencygraph] func1 -> PILOT_REORDER batches=139 early_aborted=565
+== fppck_usdc exit=124
+GOODPUT label=fppck_usdc processed=802/151045 success=404 failed=398 elapsed_s=16.0 goodput_tps=25.2
+STATECHECK(label words total highbytes raw_deltas empty committed): fppck_usdc 48120 48108003660031865732317 1 0 0 408
+2026-10-11 06:51:55.447 UTC 002d INFO [dependencygraph] func1 -> PILOT_REORDER batches=20 early_aborted=356
+SMOKE Fabric++ ok
+== pk_sb1.0_fpp_r1000 exit=124
+GOODPUT label=pk_sb1.0_fpp_r1000 processed=7339/60000 success=5671 failed=1668 elapsed_s=60.0 goodput_tps=94.5
+STATECHECK(label words total highbytes raw_deltas empty committed): pk_sb1.0_fpp_r1000 0 0 0 0 0 5675
+2026-10-11 06:56:13.160 UTC 0023 INFO [dependencygraph] func1 -> PILOT_REORDER batches=72 early_aborted=762
+COLLAPSE pk_sb1.0_fpp at r=1000
+== pk_sb1.0_fpp_r500 exit=124
+GOODPUT label=pk_sb1.0_fpp_r500 processed=2659/60000 success=1850 failed=809 elapsed_s=102.0 goodput_tps=18.1
+STATECHECK(label words total highbytes raw_deltas empty committed): pk_sb1.0_fpp_r500 0 0 0 0 0 1854
+2026-10-11 07:01:21.650 UTC 0023 INFO [dependencygraph] func1 -> PILOT_REORDER batches=27 early_aborted=373
+COLLAPSE pk_sb1.0_fpp at r=500
+== pk_sb1.0_fpp_r250 exit=0
+Replay complete: 25874 successful, 4126 failed, 0 skipped out of 0 total transfers
+EPR STATS successes=25874 steady_goodput=215.9 whole_goodput=215.7 lat_ms_p50=116.1 lat_ms_p90=199.7 lat_ms_p99=224.5 lat_ms_mean=120.1
+GOODPUT label=pk_sb1.0_fpp_r250 processed=29947/60000 success=25825 failed=4122 elapsed_s=120.0 goodput_tps=215.2
+STATECHECK(label words total highbytes raw_deltas empty committed): pk_sb1.0_fpp_r250 0 0 0 0 0 25878
+2026-10-11 07:07:34.917 UTC 0030 INFO [dependencygraph] func1 -> PILOT_REORDER batches=590 early_aborted=3213
+SUSTAIN pk_sb1.0_fpp at r=250
+== pk_sb1.2_fpp_r1000 exit=124
+GOODPUT label=pk_sb1.2_fpp_r1000 processed=0/60000 success=0 failed=0 elapsed_s=nan goodput_tps=nan
+STATECHECK(label words total highbytes raw_deltas empty committed): pk_sb1.2_fpp_r1000 0 0 0 0 0 4
+COLLAPSE pk_sb1.2_fpp at r=1000
+== pk_sb1.2_fpp_r500 exit=124
+GOODPUT label=pk_sb1.2_fpp_r500 processed=0/60000 success=0 failed=0 elapsed_s=nan goodput_tps=nan
+STATECHECK(label words total highbytes raw_deltas empty committed): pk_sb1.2_fpp_r500 0 0 0 0 0 4
+COLLAPSE pk_sb1.2_fpp at r=500
+== pk_sb1.2_fpp_r250 exit=124
+GOODPUT label=pk_sb1.2_fpp_r250 processed=0/60000 success=0 failed=0 elapsed_s=nan goodput_tps=nan
+STATECHECK(label words total highbytes raw_deltas empty committed): pk_sb1.2_fpp_r250 0 0 0 0 0 4
+COLLAPSE pk_sb1.2_fpp at r=250
+== pk_sb1.2_fpp_r100 exit=0
+Replay complete: 9326 successful, 2674 failed, 0 skipped out of 0 total transfers
+EPR STATS successes=9326 steady_goodput=77.7 whole_goodput=77.7 lat_ms_p50=101.7 lat_ms_p90=187.6 lat_ms_p99=209.6 lat_ms_mean=104.7
+GOODPUT label=pk_sb1.2_fpp_r100 processed=11982/60000 success=9312 failed=2670 elapsed_s=120.0 goodput_tps=77.6
+STATECHECK(label words total highbytes raw_deltas empty committed): pk_sb1.2_fpp_r100 0 0 0 0 0 9330
+2026-10-11 07:25:26.426 UTC 0030 INFO [dependencygraph] func1 -> PILOT_REORDER batches=590 early_aborted=2359
+SUSTAIN pk_sb1.2_fpp at r=100
+== pk_sb0.8_fpp_r1000 exit=0
+Replay complete: 56056 successful, 3944 failed, 0 skipped out of 0 total transfers
+EPR STATS successes=56056 steady_goodput=931.6 whole_goodput=933.6 lat_ms_p50=89.8 lat_ms_p90=131.6 lat_ms_p99=142.1 lat_ms_mean=90.5
+GOODPUT label=pk_sb0.8_fpp_r1000 processed=59882/60000 success=55946 failed=3936 elapsed_s=60.0 goodput_tps=932.4
+STATECHECK(label words total highbytes raw_deltas empty committed): pk_sb0.8_fpp_r1000 0 0 0 0 0 56060
+2026-10-11 07:26:49.228 UTC 0024 INFO [dependencygraph] func1 -> PILOT_REORDER batches=569 early_aborted=1542
+== pk_sb0.8_fpp_r2000 exit=0
+Replay complete: 55089 successful, 4911 failed, 0 skipped out of 0 total transfers
+EPR STATS successes=55089 steady_goodput=1835.3 whole_goodput=1830.3 lat_ms_p50=66.7 lat_ms_p90=87.5 lat_ms_p99=96.4 lat_ms_mean=67.2
+GOODPUT label=pk_sb0.8_fpp_r2000 processed=59859/60000 success=54962 failed=4897 elapsed_s=30.0 goodput_tps=1832.0
+STATECHECK(label words total highbytes raw_deltas empty committed): pk_sb0.8_fpp_r2000 0 0 0 0 0 55093
+2026-10-11 07:27:42.879 UTC 001e INFO [dependencygraph] func1 -> PILOT_REORDER batches=532 early_aborted=1633
+== pk_sb0.8_fpp_r3000 exit=0
+Replay complete: 54385 successful, 5615 failed, 0 skipped out of 0 total transfers
+EPR STATS successes=54385 steady_goodput=2717.7 whole_goodput=2703.0 lat_ms_p50=58.2 lat_ms_p90=71.9 lat_ms_p99=77.2 lat_ms_mean=58.5
+GOODPUT label=pk_sb0.8_fpp_r3000 processed=59857/60000 success=54257 failed=5600 elapsed_s=20.0 goodput_tps=2712.7
+STATECHECK(label words total highbytes raw_deltas empty committed): pk_sb0.8_fpp_r3000 0 0 0 0 0 54389
+2026-10-11 07:28:27.371 UTC 001c INFO [dependencygraph] func1 -> PILOT_REORDER batches=545 early_aborted=1771
+== pk_sb0.8_fpp_r4000 exit=0
+Replay complete: 48102 successful, 11898 failed, 0 skipped out of 0 total transfers
+EPR STATS successes=48102 steady_goodput=3102.4 whole_goodput=3125.4 lat_ms_p50=310.9 lat_ms_p90=471.2 lat_ms_p99=493.6 lat_ms_mean=292.6
+GOODPUT label=pk_sb0.8_fpp_r4000 processed=54178/60000 success=43720 failed=10458 elapsed_s=14.0 goodput_tps=3122.6
+STATECHECK(label words total highbytes raw_deltas empty committed): pk_sb0.8_fpp_r4000 0 0 0 0 0 48106
+2026-10-11 07:29:05.493 UTC 001b INFO [dependencygraph] func1 -> PILOT_REORDER batches=499 early_aborted=1715
+== pk_sb0.8_fpp_r6000 exit=0
+Replay complete: 36497 successful, 23503 failed, 0 skipped out of 0 total transfers
+EPR STATS successes=36497 steady_goodput=2322.1 whole_goodput=2355.7 lat_ms_p50=2525.7 lat_ms_p90=4952.7 lat_ms_p99=5515.5 lat_ms_mean=2636.6
+GOODPUT label=pk_sb0.8_fpp_r6000 processed=53836/60000 success=33339 failed=20497 elapsed_s=14.0 goodput_tps=2381.0
+STATECHECK(label words total highbytes raw_deltas empty committed): pk_sb0.8_fpp_r6000 0 0 0 0 0 36501
+2026-10-11 07:29:44.639 UTC 001b INFO [dependencygraph] func1 -> PILOT_REORDER batches=506 early_aborted=1823
+COLLAPSE pk_sb0.8_fpp at r=6000
+== pk_usdc_fpp_r1000 exit=124
+GOODPUT label=pk_usdc_fpp_r1000 processed=76108/151045 success=48 failed=76060 elapsed_s=120.0 goodput_tps=0.4
+STATECHECK(label words total highbytes raw_deltas empty committed): pk_usdc_fpp_r1000 48109 48108003660031865732317 1 0 0 52
+2026-10-11 07:30:53.999 UTC 0021 INFO [dependencygraph] func1 -> PILOT_REORDER batches=1 early_aborted=52
+COLLAPSE pk_usdc_fpp at r=1000
+== pk_usdc_fpp_r500 exit=124
+GOODPUT label=pk_usdc_fpp_r500 processed=102/151045 success=50 failed=52 elapsed_s=2.0 goodput_tps=25.0
+STATECHECK(label words total highbytes raw_deltas empty committed): pk_usdc_fpp_r500 48109 48108003660031865732317 1 0 0 54
+2026-10-11 07:36:03.158 UTC 0021 INFO [dependencygraph] func1 -> PILOT_REORDER batches=2 early_aborted=52
+COLLAPSE pk_usdc_fpp at r=500
+== pk_usdc_fpp_r250 exit=124
+GOODPUT label=pk_usdc_fpp_r250 processed=10616/151045 success=400 failed=10216 elapsed_s=120.0 goodput_tps=3.3
+STATECHECK(label words total highbytes raw_deltas empty committed): pk_usdc_fpp_r250 48128 48108003660031865732317 1 0 0 404
+2026-10-11 07:41:46.594 UTC 0028 INFO [dependencygraph] func1 -> PILOT_REORDER batches=19 early_aborted=446
+COLLAPSE pk_usdc_fpp at r=250
+== pk_usdc_fpp_r100 exit=124
+GOODPUT label=pk_usdc_fpp_r100 processed=5343/151045 success=1578 failed=3765 elapsed_s=60.0 goodput_tps=26.3
+STATECHECK(label words total highbytes raw_deltas empty committed): pk_usdc_fpp_r100 48235 48108003660031865732317 1 0 0 1582
+2026-10-11 07:47:59.971 UTC 0035 INFO [dependencygraph] func1 -> PILOT_REORDER batches=266 early_aborted=1941
+COLLAPSE pk_usdc_fpp at r=100
+== pk_z0.8_fpp_r1000 exit=124
+GOODPUT label=pk_z0.8_fpp_r1000 processed=8670/60000 success=6214 failed=2456 elapsed_s=18.0 goodput_tps=345.2
+STATECHECK(label words total highbytes raw_deltas empty committed): pk_z0.8_fpp_r1000 9239 9037000029928052010165 1 0 0 6218
+2026-10-11 07:51:43.982 UTC 0024 INFO [dependencygraph] func1 -> PILOT_REORDER batches=87 early_aborted=1325
+COLLAPSE pk_z0.8_fpp at r=1000
+== pk_z0.8_fpp_r500 exit=124
+GOODPUT label=pk_z0.8_fpp_r500 processed=2137/60000 success=1336 failed=801 elapsed_s=14.0 goodput_tps=95.4
+STATECHECK(label words total highbytes raw_deltas empty committed): pk_z0.8_fpp_r500 9091 9037000029928052010165 1 0 0 1340
+2026-10-11 07:57:07.161 UTC 0026 INFO [dependencygraph] func1 -> PILOT_REORDER batches=22 early_aborted=436
+COLLAPSE pk_z0.8_fpp at r=500
+== pk_z0.8_fpp_r250 exit=0
+Replay complete: 24884 successful, 5116 failed, 0 skipped out of 0 total transfers
+EPR STATS successes=24884 steady_goodput=207.1 whole_goodput=207.3 lat_ms_p50=111.9 lat_ms_p90=196.4 lat_ms_p99=218.8 lat_ms_mean=115.7
+GOODPUT label=pk_z0.8_fpp_r250 processed=29976/60000 success=24862 failed=5114 elapsed_s=120.0 goodput_tps=207.2
+STATECHECK(label words total highbytes raw_deltas empty committed): pk_z0.8_fpp_r250 9552 9037000029928052010165 1 0 0 24888
+2026-10-11 08:02:56.474 UTC 0030 INFO [dependencygraph] func1 -> PILOT_REORDER batches=594 early_aborted=4335
+SUSTAIN pk_z0.8_fpp at r=250
+== pk_z0.99_fpp_r1000 exit=124
+GOODPUT label=pk_z0.99_fpp_r1000 processed=83/60000 success=49 failed=34 elapsed_s=2.0 goodput_tps=24.5
+STATECHECK(label words total highbytes raw_deltas empty committed): pk_z0.99_fpp_r1000 7363 7359000029930701161546 1 0 0 53
+2026-10-11 08:04:53.558 UTC 002b INFO [dependencygraph] func1 -> PILOT_REORDER batches=1 early_aborted=34
+COLLAPSE pk_z0.99_fpp at r=1000
+== pk_z0.99_fpp_r500 exit=124
+GOODPUT label=pk_z0.99_fpp_r500 processed=35/60000 success=23 failed=12 elapsed_s=2.0 goodput_tps=11.5
+STATECHECK(label words total highbytes raw_deltas empty committed): pk_z0.99_fpp_r500 7360 7359000029930701161546 1 0 0 27
+2026-10-11 08:09:17.308 UTC 0022 INFO [dependencygraph] func1 -> PILOT_REORDER batches=1 early_aborted=12
+COLLAPSE pk_z0.99_fpp at r=500
+== pk_z0.99_fpp_r250 exit=124
+GOODPUT label=pk_z0.99_fpp_r250 processed=118/60000 success=72 failed=46 elapsed_s=2.0 goodput_tps=36.0
+STATECHECK(label words total highbytes raw_deltas empty committed): pk_z0.99_fpp_r250 7364 7359000029930701161546 1 0 0 76
+2026-10-11 08:14:25.706 UTC 0022 INFO [dependencygraph] func1 -> PILOT_REORDER batches=3 early_aborted=42
+COLLAPSE pk_z0.99_fpp at r=250
+== pk_z0.99_fpp_r100 exit=0
+Replay complete: 8645 successful, 3355 failed, 0 skipped out of 0 total transfers
+EPR STATS successes=8645 steady_goodput=72.4 whole_goodput=72.1 lat_ms_p50=96.8 lat_ms_p90=185.6 lat_ms_p99=207.8 lat_ms_mean=101.7
+GOODPUT label=pk_z0.99_fpp_r100 processed=11991/60000 success=8637 failed=3354 elapsed_s=120.0 goodput_tps=72.0
+STATECHECK(label words total highbytes raw_deltas empty committed): pk_z0.99_fpp_r100 7761 7359000029930701161546 1 0 0 8649
+2026-10-11 08:20:44.008 UTC 0030 INFO [dependencygraph] func1 -> PILOT_REORDER batches=595 early_aborted=3100
+SUSTAIN pk_z0.99_fpp at r=100
+== rk_sb1.0_fpp_r1000 exit=124
+GOODPUT label=rk_sb1.0_fpp_r1000 processed=221/60000 success=218 failed=3 elapsed_s=34.0 goodput_tps=6.4
+STATECHECK(label words total highbytes raw_deltas empty committed): rk_sb1.0_fpp_r1000 0 0 0 0 0 222
+2026-10-11 08:21:46.156 UTC 0020 INFO [dependencygraph] func1 -> PILOT_REORDER batches=3 early_aborted=51
+COLLAPSE rk_sb1.0_fpp at r=1000
+== rk_sb1.0_fpp_r500 exit=124
+GOODPUT label=rk_sb1.0_fpp_r500 processed=342/60000 success=338 failed=4 elapsed_s=66.0 goodput_tps=5.1
+STATECHECK(label words total highbytes raw_deltas empty committed): rk_sb1.0_fpp_r500 0 0 0 0 0 342
+2026-10-11 08:27:24.097 UTC 0026 INFO [dependencygraph] func1 -> PILOT_REORDER batches=5 early_aborted=86
+COLLAPSE rk_sb1.0_fpp at r=500
+== rk_sb1.0_fpp_r250 exit=124
+GOODPUT label=rk_sb1.0_fpp_r250 processed=998/60000 success=989 failed=9 elapsed_s=120.0 goodput_tps=8.2
+STATECHECK(label words total highbytes raw_deltas empty committed): rk_sb1.0_fpp_r250 0 0 0 0 0 993
+2026-10-11 08:32:07.804 UTC 0021 INFO [dependencygraph] func1 -> PILOT_REORDER batches=33 early_aborted=225
+COLLAPSE rk_sb1.0_fpp at r=250
+== rk_sb1.0_fpp_r100 exit=124
+GOODPUT label=rk_sb1.0_fpp_r100 processed=988/60000 success=981 failed=7 elapsed_s=114.0 goodput_tps=8.6
+STATECHECK(label words total highbytes raw_deltas empty committed): rk_sb1.0_fpp_r100 0 0 0 0 0 985
+2026-10-11 08:37:18.530 UTC 0022 INFO [dependencygraph] func1 -> PILOT_REORDER batches=66 early_aborted=177
+COLLAPSE rk_sb1.0_fpp at r=100
+== rk_sb1.2_fpp_r1000 exit=124
+GOODPUT label=rk_sb1.2_fpp_r1000 processed=0/60000 success=0 failed=0 elapsed_s=nan goodput_tps=nan
+STATECHECK(label words total highbytes raw_deltas empty committed): rk_sb1.2_fpp_r1000 0 0 0 0 0 4
+COLLAPSE rk_sb1.2_fpp at r=1000
+== rk_sb1.2_fpp_r500 exit=124
+GOODPUT label=rk_sb1.2_fpp_r500 processed=0/60000 success=0 failed=0 elapsed_s=nan goodput_tps=nan
+STATECHECK(label words total highbytes raw_deltas empty committed): rk_sb1.2_fpp_r500 0 0 0 0 0 4
+COLLAPSE rk_sb1.2_fpp at r=500
+== rk_sb1.2_fpp_r250 exit=124
+GOODPUT label=rk_sb1.2_fpp_r250 processed=11/60000 success=11 failed=0 elapsed_s=2.0 goodput_tps=5.5
+STATECHECK(label words total highbytes raw_deltas empty committed): rk_sb1.2_fpp_r250 0 0 0 0 0 15
+2026-10-11 08:52:49.945 UTC 0023 INFO [dependencygraph] func1 -> PILOT_REORDER batches=1 early_aborted=1
+COLLAPSE rk_sb1.2_fpp at r=250
+== rk_sb1.2_fpp_r100 exit=124
+GOODPUT label=rk_sb1.2_fpp_r100 processed=253/60000 success=253 failed=0 elapsed_s=6.0 goodput_tps=42.1
+STATECHECK(label words total highbytes raw_deltas empty committed): rk_sb1.2_fpp_r100 0 0 0 0 0 257
+2026-10-11 08:58:29.807 UTC 0023 INFO [dependencygraph] func1 -> PILOT_REORDER batches=29 early_aborted=131
+COLLAPSE rk_sb1.2_fpp at r=100
+== rk_sb0.8_fpp_r1000 exit=124
+GOODPUT label=rk_sb0.8_fpp_r1000 processed=1912/60000 success=1835 failed=77 elapsed_s=60.0 goodput_tps=30.6
+STATECHECK(label words total highbytes raw_deltas empty committed): rk_sb0.8_fpp_r1000 0 0 0 0 0 1839
+2026-10-11 09:03:13.150 UTC 0022 INFO [dependencygraph] func1 -> PILOT_REORDER batches=21 early_aborted=133
+COLLAPSE rk_sb0.8_fpp at r=1000
+== rk_sb0.8_fpp_r500 exit=124
+GOODPUT label=rk_sb0.8_fpp_r500 processed=37088/60000 success=3942 failed=33146 elapsed_s=120.0 goodput_tps=32.8
+STATECHECK(label words total highbytes raw_deltas empty committed): rk_sb0.8_fpp_r500 0 0 0 0 0 3946
+2026-10-11 09:08:37.280 UTC 0023 INFO [dependencygraph] func1 -> PILOT_REORDER batches=51 early_aborted=226
+COLLAPSE rk_sb0.8_fpp at r=500
+== rk_sb0.8_fpp_r250 exit=124
+GOODPUT label=rk_sb0.8_fpp_r250 processed=10480/60000 success=10335 failed=145 elapsed_s=120.0 goodput_tps=86.1
+STATECHECK(label words total highbytes raw_deltas empty committed): rk_sb0.8_fpp_r250 0 0 0 0 0 10339
+2026-10-11 09:14:13.991 UTC 0028 INFO [dependencygraph] func1 -> PILOT_REORDER batches=207 early_aborted=788
+COLLAPSE rk_sb0.8_fpp at r=250
+== rk_sb0.8_fpp_r100 exit=0
+Replay complete: 11964 successful, 36 failed, 0 skipped out of 0 total transfers
+EPR STATS successes=11964 steady_goodput=99.6 whole_goodput=99.7 lat_ms_p50=110.7 lat_ms_p90=191.9 lat_ms_p99=211.8 lat_ms_mean=112.6
+GOODPUT label=rk_sb0.8_fpp_r100 processed=11995/60000 success=11959 failed=36 elapsed_s=120.0 goodput_tps=99.7
+STATECHECK(label words total highbytes raw_deltas empty committed): rk_sb0.8_fpp_r100 0 0 0 0 0 11968
+2026-10-11 09:20:02.425 UTC 0030 INFO [dependencygraph] func1 -> PILOT_REORDER batches=585 early_aborted=115
+SUSTAIN rk_sb0.8_fpp at r=100
+== rk_usdc_fpp_r1000 exit=124
+GOODPUT label=rk_usdc_fpp_r1000 processed=152/151045 success=152 failed=0 elapsed_s=2.0 goodput_tps=76.0
+STATECHECK(label words total highbytes raw_deltas empty committed): rk_usdc_fpp_r1000 48114 48108003660031865732317 1 0 0 156
+2026-10-11 09:21:16.210 UTC 0022 INFO [dependencygraph] func1 -> PILOT_REORDER batches=4 early_aborted=142
+COLLAPSE rk_usdc_fpp at r=1000
+== rk_usdc_fpp_r500 exit=124
+GOODPUT label=rk_usdc_fpp_r500 processed=58/151045 success=58 failed=0 elapsed_s=2.0 goodput_tps=29.0
+STATECHECK(label words total highbytes raw_deltas empty committed): rk_usdc_fpp_r500 48109 48108003660031865732317 1 0 0 62
+2026-10-11 09:26:14.913 UTC 0020 INFO [dependencygraph] func1 -> PILOT_REORDER batches=2 early_aborted=56
+COLLAPSE rk_usdc_fpp at r=500
+== rk_usdc_fpp_r250 exit=124
+GOODPUT label=rk_usdc_fpp_r250 processed=106/151045 success=106 failed=0 elapsed_s=32.0 goodput_tps=3.3
+STATECHECK(label words total highbytes raw_deltas empty committed): rk_usdc_fpp_r250 48111 48108003660031865732317 1 0 0 110
+2026-10-11 09:32:05.483 UTC 0029 INFO [dependencygraph] func1 -> PILOT_REORDER batches=4 early_aborted=101
+COLLAPSE rk_usdc_fpp at r=250
+== rk_usdc_fpp_r100 exit=124
+GOODPUT label=rk_usdc_fpp_r100 processed=272/151045 success=272 failed=0 elapsed_s=8.0 goodput_tps=34.0
+STATECHECK(label words total highbytes raw_deltas empty committed): rk_usdc_fpp_r100 48119 48108003660031865732317 1 0 0 276
+2026-10-11 09:36:31.040 UTC 0021 INFO [dependencygraph] func1 -> PILOT_REORDER batches=30 early_aborted=285
+COLLAPSE rk_usdc_fpp at r=100
+== rk_z0.8_fpp_r1000 exit=124
+GOODPUT label=rk_z0.8_fpp_r1000 processed=254/60000 success=254 failed=0 elapsed_s=2.0 goodput_tps=126.9
+STATECHECK(label words total highbytes raw_deltas empty committed): rk_z0.8_fpp_r1000 9048 9037000029928052010165 1 0 0 258
+2026-10-11 09:41:29.849 UTC 001f INFO [dependencygraph] func1 -> PILOT_REORDER batches=4 early_aborted=82
+COLLAPSE rk_z0.8_fpp at r=1000
+== rk_z0.8_fpp_r500 exit=124
+GOODPUT label=rk_z0.8_fpp_r500 processed=9527/60000 success=486 failed=9041 elapsed_s=120.0 goodput_tps=4.0
+STATECHECK(label words total highbytes raw_deltas empty committed): rk_z0.8_fpp_r500 9061 9037000029928052010165 1 0 0 490
+2026-10-11 09:47:43.220 UTC 002c INFO [dependencygraph] func1 -> PILOT_REORDER batches=9 early_aborted=190
+COLLAPSE rk_z0.8_fpp at r=500
+== rk_z0.8_fpp_r250 exit=124
+GOODPUT label=rk_z0.8_fpp_r250 processed=404/60000 success=404 failed=0 elapsed_s=4.0 goodput_tps=101.0
+STATECHECK(label words total highbytes raw_deltas empty committed): rk_z0.8_fpp_r250 9055 9037000029928052010165 1 0 0 408
+2026-10-11 09:51:57.047 UTC 0021 INFO [dependencygraph] func1 -> PILOT_REORDER batches=12 early_aborted=115
+COLLAPSE rk_z0.8_fpp at r=250
+== rk_z0.8_fpp_r100 exit=124
+GOODPUT label=rk_z0.8_fpp_r100 processed=383/60000 success=383 failed=0 elapsed_s=6.0 goodput_tps=63.8
+STATECHECK(label words total highbytes raw_deltas empty committed): rk_z0.8_fpp_r100 9053 9037000029928052010165 1 0 0 387
+2026-10-11 09:57:08.450 UTC 0021 INFO [dependencygraph] func1 -> PILOT_REORDER batches=21 early_aborted=85
+COLLAPSE rk_z0.8_fpp at r=100
+== rk_z0.99_fpp_r1000 exit=124
+GOODPUT label=rk_z0.99_fpp_r1000 processed=0/60000 success=0 failed=0 elapsed_s=nan goodput_tps=nan
+STATECHECK(label words total highbytes raw_deltas empty committed): rk_z0.99_fpp_r1000 7360 7359000029930701161546 1 0 0 4
+COLLAPSE rk_z0.99_fpp at r=1000
+== rk_z0.99_fpp_r500 exit=124
+GOODPUT label=rk_z0.99_fpp_r500 processed=30/60000 success=30 failed=0 elapsed_s=2.0 goodput_tps=15.0
+STATECHECK(label words total highbytes raw_deltas empty committed): rk_z0.99_fpp_r500 7361 7359000029930701161546 1 0 0 34
+2026-10-11 10:07:18.089 UTC 0020 INFO [dependencygraph] func1 -> PILOT_REORDER batches=1 early_aborted=14
+COLLAPSE rk_z0.99_fpp at r=500
+== rk_z0.99_fpp_r250 exit=124
+GOODPUT label=rk_z0.99_fpp_r250 processed=50/60000 success=50 failed=0 elapsed_s=2.0 goodput_tps=25.0
+STATECHECK(label words total highbytes raw_deltas empty committed): rk_z0.99_fpp_r250 7362 7359000029930701161546 1 0 0 54
+2026-10-11 10:12:32.073 UTC 0021 INFO [dependencygraph] func1 -> PILOT_REORDER batches=2 early_aborted=25
+COLLAPSE rk_z0.99_fpp at r=250
+== rk_z0.99_fpp_r100 exit=124
+GOODPUT label=rk_z0.99_fpp_r100 processed=74/60000 success=74 failed=0 elapsed_s=2.0 goodput_tps=37.0
+STATECHECK(label words total highbytes raw_deltas empty committed): rk_z0.99_fpp_r100 7363 7359000029930701161546 1 0 0 78
+2026-10-11 10:17:47.366 UTC 0023 INFO [dependencygraph] func1 -> PILOT_REORDER batches=5 early_aborted=43
+COLLAPSE rk_z0.99_fpp at r=100
+PHASE31_DONE

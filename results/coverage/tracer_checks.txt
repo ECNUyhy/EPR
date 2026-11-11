@@ -1,0 +1,56 @@
+Checks of the tracers in src/ (fabric-x-evm endorser/execution).
+
+== Unit tests of the program tracer's call-input, CREATE init-code and gas rules
+  PASS TestEPRCallInputStraddle
+  PASS TestEPRCallInputStraddle/ends-inside-word
+  PASS TestEPRCallInputStraddle/starts-inside-word
+  PASS TestEPRCreatePoison
+  PASS TestEPRCreatePoison/poisoned-init-code
+  PASS TestEPRCreatePoison/whole-word-init-code
+  PASS TestEPRGasMarker
+  PASS TestEPRGasMarker/raw
+  PASS TestEPRGasMarker/minus-as-add
+  PASS TestEPRGasMarker/minus-as-add-wraps
+  PASS TestEPRGasMarker/minus-const
+  PASS TestEPRGasMarker/plus-const
+  PASS TestEPRGasMarker/and-mask
+  PASS TestEPRGasMarker/minus-wraps
+  PASS TestEPRGasMarker/const-minus-gas
+  PASS TestEPRGasMarker/times-two
+  PASS TestEPRGasMarker/two-readings
+  PASS TestEPRGasMarker/plus-huge
+  PASS TestEPRGasRuleFailedCreateInCallee
+  PASS TestEPRGasRuleFailedCall
+  PASS TestEPRGasRuleRepeatedWrites
+  PASS TestEPRGasRuleFixedAllowanceCallee
+  PASS TestEPRGasRuleWorkloads
+
+== Workload acceptance: every transaction of the evaluated workloads is accepted by the gas rule
+   (rejected = 0), no program is dropped by the GAS-marker rule (marker_lost = 0); min_margin is the smallest
+   gas margin left over the per-SSTORE requirement
+  GASRULE workload=transfer txs=300 rejected=0 reverted=0 min_margin=217618 marker_lost=0
+  GASRULE workload=smallbank txs=300 rejected=0 reverted=0 min_margin=238607 marker_lost=0
+  GASRULE workload=dex txs=200 rejected=0 reverted=0 min_margin=600263 marker_lost=0
+
+== Differential and regression tests (endorser/execution)
+  PASS 15, FAIL 0
+
+== Table III (python analysis/table2.py results/coverage/cov_mainnet.jsonl.gz)
+transactions ok: 64529
+Scope                                     Count   Strict  Headroom
+Direct writes, all                        43.4k    26.6%     90.3%
+Direct writes, hot                        15.2k    31.4%     91.7%
+Indirect writes, all                     134.4k     5.0%     19.2%
+Indirect writes, hot                      51.3k     6.4%     23.2%
+Hot-slot txs, all writes repairable       18.3k    26.4%     72.1%
+
+== Guarded deltas and programs among the repairable writes (python analysis/table2_split.py ...)
+txs ok 64529
+scope                       n | strict: delta   prog  total | headroom: delta   prog  total | delta share of headroom-repairable
+Direct writes, all       43385 |  15.9%  10.7%  26.6% |  49.6%  40.7%  90.3% |  55.0%
+Direct writes, hot       15180 |  20.6%  10.8%  31.4% |  52.8%  38.9%  91.7% |  57.6%
+Indirect writes, all    134397 |   0.4%   4.6%   5.0% |   1.0%  18.2%  19.2% |   5.3%
+Indirect writes, hot     51298 |   0.4%   6.0%   6.4% |   1.1%  22.1%  23.2% |   4.8%
+USDC direct hot           2486 |  19.7%   3.7%  23.5% |  84.0%  15.8%  99.7% |  84.2%
+USDT direct hot           5783 |  44.0%   0.5%  44.5% |  98.3%   1.7% 100.0% |  98.3%
+hot-slot txs 18308: strict all 26.4% (delta-only 15.7%); headroom all 72.1% (delta-only 39.9%)

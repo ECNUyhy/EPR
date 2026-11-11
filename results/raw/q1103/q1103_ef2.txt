@@ -1,0 +1,39 @@
+LOAD control_ef2_1 0.22 1.44 1.55 waited=5min
+== ctl1_ef2_z0.8_htf2_r2000 exit=0
+Replay complete: 60000 successful, 0 failed, 0 skipped out of 0 total transfers
+EPR STATS successes=60000 steady_goodput=2000.2 whole_goodput=2006.4 lat_ms_p50=75.5 lat_ms_p90=99.2 lat_ms_p99=125.8 lat_ms_mean=76.0
+GOODPUT label=ctl1_ef2_z0.8_htf2_r2000 processed=59800/60000 success=59800 failed=0 elapsed_s=30.0 goodput_tps=1993.3
+STATECHECK(label words total highbytes raw_deltas empty committed): ctl1_ef2_z0.8_htf2_r2000 9819 9037000029928052010165 1 0 0 60004
+2026-11-05 22:25:50.457 UTC 002c INFO [validator-committer] eprStatsLogger -> PILOT_REEXEC calls=7454 txs=24165 micros=10835346 compared=0 mismatch=0 tx_compared=0 tx_mismatch=0 early_gossip=7454 reexec_all_committed=0 reexec_all_reverted=0 reexec_all_new_keys=0
+2026/11/05 22:25:48 D16REEXEC requests=6922 txs=22452 reverted=0 conflict_reexec=0 avg_us_per_tx=373.9
+2026-11-05 22:25:50.456 UTC 002b INFO [validator-committer] eprStatsLogger -> PILOT_EPR repaired_reads=28083 applied=115190 guard_fails=0 fast_deltas=0 fast_progs=0 snapshot_reads=0 prefetch_hits=0 prefetch_miss=0
+CONTROL ef2 try=1 z0.8 htf2 r=2000 goodput=1993 october=1993 ratio=1.000 gate=1
+== ctl1_ef2_sb1.0_htf2_r2000 exit=0
+Replay complete: 59395 successful, 605 failed, 0 skipped out of 0 total transfers
+EPR STATS successes=59395 steady_goodput=1978.0 whole_goodput=1976.0 lat_ms_p50=72.5 lat_ms_p90=95.0 lat_ms_p99=115.6 lat_ms_mean=72.8
+GOODPUT label=ctl1_ef2_sb1.0_htf2_r2000 processed=59814/60000 success=59209 failed=605 elapsed_s=30.0 goodput_tps=1973.6
+STATECHECK(label words total highbytes raw_deltas empty committed): ctl1_ef2_sb1.0_htf2_r2000 0 0 0 0 0 59399
+2026-11-05 22:26:42.944 UTC 002c INFO [validator-committer] eprStatsLogger -> PILOT_REEXEC calls=8637 txs=17111 micros=7599349 compared=0 mismatch=0 tx_compared=0 tx_mismatch=0 early_gossip=8637 reexec_all_committed=2007 reexec_all_reverted=0 reexec_all_new_keys=0
+2026/11/05 22:26:40 D16REEXEC requests=7882 txs=15536 reverted=7 conflict_reexec=0 avg_us_per_tx=355.6
+2026-11-05 22:26:42.944 UTC 002b INFO [validator-committer] eprStatsLogger -> PILOT_EPR repaired_reads=17449 applied=59976 guard_fails=7 fast_deltas=0 fast_progs=0 snapshot_reads=0 prefetch_hits=0 prefetch_miss=0
+CONTROL ef2 try=1 sb1.0 htf2 r=2000 goodput=1973 october=1974 ratio=0.999 gate=0
+LOAD ef2_usdc_htf2_r1500 2.98 2.26 1.85 waited=0min
+== ef2_usdc_htf2_r1500 exit=0
+Replay complete: 151045 successful, 0 failed, 0 skipped out of 0 total transfers
+EPR STATS successes=151045 steady_goodput=1503.7 whole_goodput=1481.2 lat_ms_p50=540.8 lat_ms_p90=1236.6 lat_ms_p99=2552.8 lat_ms_mean=654.8
+GOODPUT label=ef2_usdc_htf2_r1500 processed=150679/151045 success=150679 failed=0 elapsed_s=102.0 goodput_tps=1477.2
+STATECHECK(label words total highbytes raw_deltas empty committed): ef2_usdc_htf2_r1500 53219 48108003660031865732317 1 0 0 151049
+2026-11-05 22:28:46.840 UTC 0049 INFO [validator-committer] eprStatsLogger -> PILOT_REEXEC calls=42582 txs=121488 micros=56794797 compared=0 mismatch=0 tx_compared=0 tx_mismatch=0 early_gossip=42582 reexec_all_committed=0 reexec_all_reverted=0 reexec_all_new_keys=0
+2026/11/05 22:28:44 D16REEXEC requests=41747 txs=119668 reverted=0 conflict_reexec=0 avg_us_per_tx=390.1 prof req_decode_us=15.1 prefetch_us=56.3 exec_wall_us=333.6 encode_us=10.5 prefetch_keys=11.7 | per_exec execs=119668 unmarshal_us=12.0 setup_us=6.6 call_us=961.2 dbget_us=491.8 dbgets=5.00 collect_us=14.8
+2026-11-05 22:28:46.840 UTC 0048 INFO [validator-committer] eprStatsLogger -> PILOT_EPR repaired_reads=191511 applied=289302 guard_fails=0 fast_deltas=0 fast_progs=0 snapshot_reads=0 prefetch_hits=0 prefetch_miss=0
+EF ef2_usdc_htf2_r1500 2026/11/05 22:28:44 D16REEXEC requests=41747 txs=119668 reverted=0 conflict_reexec=0 avg_us_per_tx=390.1 prof req_decode_us=15.1 prefetch_us=56.3 exec_wall_us=333.6 encode_us=10.5 prefetch_keys=11.7 | per_exec execs=119668 unmarshal_us=12.0 setup_us=6.6 call_us=961.2 dbget_us=491.8 dbgets=5.00 collect_us=14.8
+LOAD ef2_usdc_rxo2_r1500 5.25 3.15 2.22 waited=0min
+== ef2_usdc_rxo2_r1500 exit=124
+GOODPUT label=ef2_usdc_rxo2_r1500 processed=61185/151045 success=61185 failed=0 elapsed_s=284.0 goodput_tps=215.4
+STATECHECK(label words total highbytes raw_deltas empty committed): ef2_usdc_rxo2_r1500 50936 48108003660031865732317 1 0 0 69566
+2026-11-05 22:33:57.641 UTC 0093 INFO [validator-committer] eprStatsLogger -> PILOT_REEXEC calls=16188 txs=64421 micros=49369180 compared=128800 mismatch=0 tx_compared=64421 tx_mismatch=0 early_gossip=0 reexec_all_committed=0 reexec_all_reverted=0 reexec_all_new_keys=0
+2026/11/05 22:33:59 D16REEXEC requests=16257 txs=64783 reverted=0 conflict_reexec=0 avg_us_per_tx=697.3 prof req_decode_us=15.1 prefetch_us=47.4 exec_wall_us=649.8 encode_us=10.1 prefetch_keys=14.0 | per_exec execs=64790 unmarshal_us=6.8 setup_us=3.3 call_us=632.6 dbget_us=339.7 dbgets=5.00 collect_us=6.9
+2026-11-05 22:33:57.641 UTC 0092 INFO [validator-committer] eprStatsLogger -> PILOT_EPR repaired_reads=102360 applied=138252 guard_fails=0 fast_deltas=0 fast_progs=0 snapshot_reads=0 prefetch_hits=0 prefetch_miss=0
+EF ef2_usdc_rxo2_r1500 2026/11/05 22:33:59 D16REEXEC requests=16257 txs=64783 reverted=0 conflict_reexec=0 avg_us_per_tx=697.3 prof req_decode_us=15.1 prefetch_us=47.4 exec_wall_us=649.8 encode_us=10.1 prefetch_keys=14.0 | per_exec execs=64790 unmarshal_us=6.8 setup_us=3.3 call_us=632.6 dbget_us=339.7 dbgets=5.00 collect_us=6.9
+EF2 runs done
+STAGE_DONE ef2 2026-11-05 22:33:59

@@ -1,0 +1,5 @@
+STACK orderer_containers=16 committer_containers=6
+== mn44_sb_fs_rtt20_r400 exit=0
+EPR STATS successes=16740 steady_goodput=340.5 whole_goodput=228.0 lat_ms_p50=693.6 lat_ms_p90=3414.4 lat_ms_p99=14714.1 lat_ms_mean=1701.5
+GOODPUT label=mn44_sb_fs_rtt20_r400 processed=22878/60000 success=15990 failed=6888 elapsed_s=72.0 goodput_tps=222.1
+STATE str_keys=200000 statuses=1:16743,3:496569

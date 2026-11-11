@@ -1,0 +1,186 @@
+LOAD control_s10c_1 0.10 0.97 2.11 waited=5min
+== ctl1_s10c_z0.8_htf2_r2000 exit=0
+Replay complete: 60000 successful, 0 failed, 0 skipped out of 0 total transfers
+EPR STATS successes=60000 steady_goodput=2000.0 whole_goodput=2005.8 lat_ms_p50=75.5 lat_ms_p90=98.6 lat_ms_p99=124.0 lat_ms_mean=75.9
+GOODPUT label=ctl1_s10c_z0.8_htf2_r2000 processed=59800/60000 success=59800 failed=0 elapsed_s=30.0 goodput_tps=1993.3
+STATECHECK(label words total highbytes raw_deltas empty committed): ctl1_s10c_z0.8_htf2_r2000 9819 9037000029928052010165 1 0 0 60004
+2026-11-05 02:23:29.575 UTC 002c INFO [validator-committer] eprStatsLogger -> PILOT_REEXEC calls=7324 txs=24279 micros=10722924 compared=0 mismatch=0 tx_compared=0 tx_mismatch=0 early_gossip=7324 reexec_all_committed=0 reexec_all_reverted=0 reexec_all_new_keys=0
+2026/11/05 02:23:27 D16REEXEC requests=6817 txs=22513 reverted=0 conflict_reexec=0 avg_us_per_tx=369.2
+2026-11-05 02:23:29.575 UTC 002b INFO [validator-committer] eprStatsLogger -> PILOT_EPR repaired_reads=28199 applied=115396 guard_fails=0 fast_deltas=0 fast_progs=0 snapshot_reads=0 prefetch_hits=0 prefetch_miss=0
+CONTROL s10c try=1 z0.8 htf2 r=2000 goodput=1993 october=1993 ratio=1.000 gate=1
+== ctl1_s10c_sb1.0_htf2_r2000 exit=0
+Replay complete: 59395 successful, 605 failed, 0 skipped out of 0 total transfers
+EPR STATS successes=59395 steady_goodput=1977.6 whole_goodput=1975.3 lat_ms_p50=72.4 lat_ms_p90=94.8 lat_ms_p99=115.9 lat_ms_mean=72.7
+GOODPUT label=ctl1_s10c_sb1.0_htf2_r2000 processed=59825/60000 success=59220 failed=605 elapsed_s=30.0 goodput_tps=1973.9
+STATECHECK(label words total highbytes raw_deltas empty committed): ctl1_s10c_sb1.0_htf2_r2000 0 0 0 0 0 59399
+2026-11-05 02:24:21.976 UTC 002c INFO [validator-committer] eprStatsLogger -> PILOT_REEXEC calls=8652 txs=17373 micros=7614113 compared=0 mismatch=0 tx_compared=0 tx_mismatch=0 early_gossip=8652 reexec_all_committed=2051 reexec_all_reverted=0 reexec_all_new_keys=0
+2026/11/05 02:24:19 D16REEXEC requests=7752 txs=15563 reverted=8 conflict_reexec=0 avg_us_per_tx=348.9
+2026-11-05 02:24:21.976 UTC 002b INFO [validator-committer] eprStatsLogger -> PILOT_EPR repaired_reads=17689 applied=60891 guard_fails=8 fast_deltas=0 fast_progs=0 snapshot_reads=0 prefetch_hits=0 prefetch_miss=0
+CONTROL s10c try=1 sb1.0 htf2 r=2000 goodput=1973 october=1974 ratio=0.999 gate=0
+LOAD rk_dex16_htf22r_r600 2.00 1.39 2.10 waited=0min
+== rk_dex16_htf22r_r600 exit=0
+Replay complete: 29999 successful, 1 failed, 0 skipped out of 0 total transfers
+EPR STATS successes=29999 steady_goodput=502.7 whole_goodput=504.6 lat_ms_p50=905.8 lat_ms_p90=7954.5 lat_ms_p99=9948.7 lat_ms_mean=2991.4
+GOODPUT label=rk_dex16_htf22r_r600 processed=29999/30000 success=29999 failed=0 elapsed_s=60.0 goodput_tps=500.0
+STATECHECK(label words total highbytes raw_deltas empty committed): rk_dex16_htf22r_r600 0 0 0 0 0 30003
+2026-11-05 02:26:15.407 UTC 0044 INFO [validator-committer] eprStatsLogger -> PILOT_REEXEC calls=15693 txs=29981 micros=36417650 compared=0 mismatch=0 tx_compared=0 tx_mismatch=0 early_gossip=15693 reexec_all_committed=0 reexec_all_reverted=0 reexec_all_new_keys=0
+2026/11/05 02:26:13 D16REEXEC requests=15693 txs=29981 reverted=0 conflict_reexec=0 avg_us_per_tx=1082.1
+2026-11-05 02:26:15.407 UTC 0043 INFO [validator-committer] eprStatsLogger -> PILOT_EPR repaired_reads=98603 applied=29999 guard_fails=0 fast_deltas=0 fast_progs=0 snapshot_reads=0 prefetch_hits=0 prefetch_miss=0
+SUSTAIN rk_dex16_htf22r at r=600
+LOAD rk_dex16_htf22r_r650 2.16 1.79 2.17 waited=0min
+== rk_dex16_htf22r_r650 exit=0
+Replay complete: 30000 successful, 0 failed, 0 skipped out of 0 total transfers
+EPR STATS successes=30000 steady_goodput=580.2 whole_goodput=538.2 lat_ms_p50=6982.1 lat_ms_p90=7906.4 lat_ms_p99=10054.7 lat_ms_mean=6358.3
+GOODPUT label=rk_dex16_htf22r_r650 processed=28854/30000 success=28854 failed=0 elapsed_s=54.0 goodput_tps=534.3
+STATECHECK(label words total highbytes raw_deltas empty committed): rk_dex16_htf22r_r650 0 0 0 0 0 30004
+2026-11-05 02:27:35.310 UTC 0037 INFO [validator-committer] eprStatsLogger -> PILOT_REEXEC calls=14655 txs=29457 micros=34764768 compared=0 mismatch=0 tx_compared=0 tx_mismatch=0 early_gossip=14655 reexec_all_committed=0 reexec_all_reverted=0 reexec_all_new_keys=0
+2026/11/05 02:27:37 D16REEXEC requests=15158 txs=29984 reverted=0 conflict_reexec=0 avg_us_per_tx=1057.5
+2026-11-05 02:27:35.310 UTC 0036 INFO [validator-committer] eprStatsLogger -> PILOT_EPR repaired_reads=108829 applied=29474 guard_fails=0 fast_deltas=0 fast_progs=0 snapshot_reads=0 prefetch_hits=0 prefetch_miss=0
+COLLAPSE rk_dex16_htf22r at r=650
+LOAD rk_dex16_htf22r_r612 3.42 2.22 2.29 waited=0min
+== rk_dex16_htf22r_r612 exit=0
+Replay complete: 29996 successful, 4 failed, 0 skipped out of 0 total transfers
+EPR STATS successes=29996 steady_goodput=499.3 whole_goodput=503.1 lat_ms_p50=5453.7 lat_ms_p90=9094.2 lat_ms_p99=11132.2 lat_ms_mean=4506.7
+GOODPUT label=rk_dex16_htf22r_r612 processed=30000/30000 success=29996 failed=4 elapsed_s=90.0 goodput_tps=333.3
+STATECHECK(label words total highbytes raw_deltas empty committed): rk_dex16_htf22r_r612 0 0 0 0 0 30000
+2026-11-05 02:29:30.339 UTC 0044 INFO [validator-committer] eprStatsLogger -> PILOT_REEXEC calls=17061 txs=29979 micros=38467950 compared=0 mismatch=0 tx_compared=0 tx_mismatch=0 early_gossip=17061 reexec_all_committed=0 reexec_all_reverted=0 reexec_all_new_keys=0
+2026/11/05 02:29:27 D16REEXEC requests=17061 txs=29979 reverted=0 conflict_reexec=0 avg_us_per_tx=1143.5
+2026-11-05 02:29:30.339 UTC 0043 INFO [validator-committer] eprStatsLogger -> PILOT_EPR repaired_reads=103237 applied=29996 guard_fails=0 fast_deltas=0 fast_progs=0 snapshot_reads=0 prefetch_hits=0 prefetch_miss=0
+REFINE_STOP rk_dex16_htf22r at r=612
+LOAD rk_dex16_eprzw2r_r1933 3.45 3.01 2.59 waited=0min
+== rk_dex16_eprzw2r_r1933 exit=0
+Replay complete: 29994 successful, 6 failed, 0 skipped out of 0 total transfers
+EPR STATS successes=29994 steady_goodput=1852.1 whole_goodput=1879.3 lat_ms_p50=342.8 lat_ms_p90=777.8 lat_ms_p99=837.2 lat_ms_mean=417.2
+GOODPUT label=rk_dex16_eprzw2r_r1933 processed=29994/30000 success=29994 failed=0 elapsed_s=18.0 goodput_tps=1666.3
+STATECHECK(label words total highbytes raw_deltas empty committed): rk_dex16_eprzw2r_r1933 0 0 0 0 0 29998
+2026-11-05 02:30:39.327 UTC 0035 INFO [validator-committer] eprStatsLogger -> PILOT_EPR repaired_reads=95498 applied=29978 guard_fails=0 fast_deltas=0 fast_progs=16 snapshot_reads=0 prefetch_hits=239824 prefetch_miss=0
+REFINE_OK rk_dex16_eprzw2r at r=1933
+LOAD rk_dex16_eprzw2r_r1985 3.04 3.08 2.65 waited=0min
+== rk_dex16_eprzw2r_r1985 exit=0
+Replay complete: 29979 successful, 21 failed, 0 skipped out of 0 total transfers
+EPR STATS successes=29979 steady_goodput=1768.9 whole_goodput=1815.8 lat_ms_p50=655.0 lat_ms_p90=1643.0 lat_ms_p99=1736.1 lat_ms_mean=779.9
+GOODPUT label=rk_dex16_eprzw2r_r1985 processed=29979/30000 success=29979 failed=0 elapsed_s=18.0 goodput_tps=1665.4
+STATECHECK(label words total highbytes raw_deltas empty committed): rk_dex16_eprzw2r_r1985 0 0 0 0 0 29983
+2026-11-05 02:31:59.366 UTC 0038 INFO [validator-committer] eprStatsLogger -> PILOT_EPR repaired_reads=99144 applied=29963 guard_fails=0 fast_deltas=0 fast_progs=16 snapshot_reads=0 prefetch_hits=239704 prefetch_miss=0
+REFINE_OK rk_dex16_eprzw2r at r=1985
+LOAD rk_dex16_eprzw2r_r2037 2.91 3.12 2.70 waited=0min
+== rk_dex16_eprzw2r_r2037 exit=0
+Replay complete: 29989 successful, 11 failed, 0 skipped out of 0 total transfers
+EPR STATS successes=29989 steady_goodput=1607.9 whole_goodput=1679.8 lat_ms_p50=897.8 lat_ms_p90=3402.0 lat_ms_p99=3471.1 lat_ms_mean=1468.1
+GOODPUT label=rk_dex16_eprzw2r_r2037 processed=29989/30000 success=29989 failed=0 elapsed_s=20.0 goodput_tps=1499.4
+STATECHECK(label words total highbytes raw_deltas empty committed): rk_dex16_eprzw2r_r2037 0 0 0 0 0 29993
+2026-11-05 02:33:16.427 UTC 0037 INFO [validator-committer] eprStatsLogger -> PILOT_EPR repaired_reads=103443 applied=29973 guard_fails=0 fast_deltas=0 fast_progs=16 snapshot_reads=0 prefetch_hits=239784 prefetch_miss=0
+REFINE_OK rk_dex16_eprzw2r at r=2037
+LOAD rk_usdc_eprzw2r_r6387 2.58 3.06 2.71 waited=0min
+== rk_usdc_eprzw2r_r6387 exit=0
+Replay complete: 150970 successful, 75 failed, 0 skipped out of 0 total transfers
+EPR STATS successes=150970 steady_goodput=5342.4 whole_goodput=5700.0 lat_ms_p50=1626.2 lat_ms_p90=4568.4 lat_ms_p99=4907.9 lat_ms_mean=2213.2
+GOODPUT label=rk_usdc_eprzw2r_r6387 processed=150970/151045 success=150970 failed=0 elapsed_s=28.0 goodput_tps=5391.4
+STATECHECK(label words total highbytes raw_deltas empty committed): rk_usdc_eprzw2r_r6387 53217 48108003660031865732317 1 0 0 150974
+2026-11-05 02:34:39.670 UTC 0039 INFO [validator-committer] eprStatsLogger -> PILOT_EPR repaired_reads=198301 applied=301838 guard_fails=0 fast_deltas=26581 fast_progs=21 snapshot_reads=0 prefetch_hits=217173 prefetch_miss=0
+2026-11-05 02:34:39.672 UTC 0031 INFO [dependencygraph] func1 -> PILOT_ESCROW fast_debits=150414 slow_debits=248 credits=151116
+REFINE_OK rk_usdc_eprzw2r at r=6387
+LOAD rk_usdc_eprzw2r_r6560 6.58 4.48 3.25 waited=0min
+== rk_usdc_eprzw2r_r6560 exit=0
+Replay complete: 150977 successful, 68 failed, 0 skipped out of 0 total transfers
+EPR STATS successes=150977 steady_goodput=5154.9 whole_goodput=5530.4 lat_ms_p50=2744.6 lat_ms_p90=6718.3 lat_ms_p99=7270.6 lat_ms_mean=3283.5
+GOODPUT label=rk_usdc_eprzw2r_r6560 processed=150977/151045 success=150977 failed=0 elapsed_s=28.0 goodput_tps=5391.8
+STATECHECK(label words total highbytes raw_deltas empty committed): rk_usdc_eprzw2r_r6560 53219 48108003660031865732317 1 0 0 150981
+2026-11-05 02:36:04.782 UTC 003d INFO [validator-committer] eprStatsLogger -> PILOT_EPR repaired_reads=202746 applied=301853 guard_fails=0 fast_deltas=25316 fast_progs=20 snapshot_reads=0 prefetch_hits=220932 prefetch_miss=0
+2026-11-05 02:36:04.781 UTC 0034 INFO [dependencygraph] func1 -> PILOT_ESCROW fast_debits=150419 slow_debits=250 credits=151123
+REFINE_STOP rk_usdc_eprzw2r at r=6560
+LOAD rk_usdc_htf22r_r1387 8.07 5.91 3.88 waited=0min
+== rk_usdc_htf22r_r1387 exit=0
+Replay complete: 151024 successful, 21 failed, 0 skipped out of 0 total transfers
+EPR STATS successes=151024 steady_goodput=1349.2 whole_goodput=1342.8 lat_ms_p50=550.6 lat_ms_p90=2814.0 lat_ms_p99=5118.6 lat_ms_mean=1257.9
+GOODPUT label=rk_usdc_htf22r_r1387 processed=151024/151045 success=151024 failed=0 elapsed_s=114.0 goodput_tps=1324.8
+STATECHECK(label words total highbytes raw_deltas empty committed): rk_usdc_htf22r_r1387 53218 48108003660031865732317 1 0 0 151028
+2026-11-05 02:38:46.461 UTC 0058 INFO [validator-committer] eprStatsLogger -> PILOT_REEXEC calls=49884 txs=127648 micros=64633974 compared=0 mismatch=0 tx_compared=0 tx_mismatch=0 early_gossip=49884 reexec_all_committed=0 reexec_all_reverted=0 reexec_all_new_keys=0
+2026/11/05 02:38:43 D16REEXEC requests=49884 txs=127648 reverted=0 conflict_reexec=0 avg_us_per_tx=423.0
+2026-11-05 02:38:46.461 UTC 0057 INFO [validator-committer] eprStatsLogger -> PILOT_EPR repaired_reads=202132 applied=301967 guard_fails=0 fast_deltas=0 fast_progs=0 snapshot_reads=0 prefetch_hits=0 prefetch_miss=0
+REFINE_OK rk_usdc_htf22r at r=1387
+LOAD rk_usdc_htf22r_r1425 6.93 6.32 4.35 waited=0min
+== rk_usdc_htf22r_r1425 exit=0
+Replay complete: 151026 successful, 19 failed, 0 skipped out of 0 total transfers
+EPR STATS successes=151026 steady_goodput=1387.0 whole_goodput=1377.9 lat_ms_p50=662.8 lat_ms_p90=2901.5 lat_ms_p99=5022.5 lat_ms_mean=1381.3
+GOODPUT label=rk_usdc_htf22r_r1425 processed=151026/151045 success=151026 failed=0 elapsed_s=110.0 goodput_tps=1372.9
+STATECHECK(label words total highbytes raw_deltas empty committed): rk_usdc_htf22r_r1425 53219 48108003660031865732317 1 0 0 151030
+2026-11-05 02:41:32.669 UTC 0059 INFO [validator-committer] eprStatsLogger -> PILOT_REEXEC calls=48579 txs=129162 micros=63980097 compared=0 mismatch=0 tx_compared=0 tx_mismatch=0 early_gossip=48579 reexec_all_committed=0 reexec_all_reverted=0 reexec_all_new_keys=0
+2026/11/05 02:41:30 D16REEXEC requests=48579 txs=129162 reverted=0 conflict_reexec=0 avg_us_per_tx=413.7
+2026-11-05 02:41:32.668 UTC 0058 INFO [validator-committer] eprStatsLogger -> PILOT_EPR repaired_reads=204991 applied=301971 guard_fails=0 fast_deltas=0 fast_progs=0 snapshot_reads=0 prefetch_hits=0 prefetch_miss=0
+REFINE_OK rk_usdc_htf22r at r=1425
+LOAD rk_usdc_htf22r_r1462 3.97 5.66 4.43 waited=0min
+== rk_usdc_htf22r_r1462 exit=0
+Replay complete: 151037 successful, 8 failed, 0 skipped out of 0 total transfers
+EPR STATS successes=151037 steady_goodput=1409.5 whole_goodput=1394.8 lat_ms_p50=3486.5 lat_ms_p90=4510.0 lat_ms_p99=6108.1 lat_ms_mean=2993.8
+GOODPUT label=rk_usdc_htf22r_r1462 processed=151037/151045 success=151037 failed=0 elapsed_s=110.0 goodput_tps=1373.0
+STATECHECK(label words total highbytes raw_deltas empty committed): rk_usdc_htf22r_r1462 53219 48108003660031865732317 1 0 0 151041
+2026-11-05 02:44:16.838 UTC 0058 INFO [validator-committer] eprStatsLogger -> PILOT_REEXEC calls=47002 txs=137234 micros=64317331 compared=0 mismatch=0 tx_compared=0 tx_mismatch=0 early_gossip=47002 reexec_all_committed=0 reexec_all_reverted=0 reexec_all_new_keys=0
+2026/11/05 02:44:14 D16REEXEC requests=47002 txs=137234 reverted=0 conflict_reexec=0 avg_us_per_tx=391.1
+2026-11-05 02:44:16.838 UTC 0057 INFO [validator-committer] eprStatsLogger -> PILOT_EPR repaired_reads=221011 applied=301993 guard_fails=0 fast_deltas=0 fast_progs=0 snapshot_reads=0 prefetch_hits=0 prefetch_miss=0
+REFINE_STOP rk_usdc_htf22r at r=1462
+LOAD rk_sb1.0_eprzw2r_r4100 4.13 5.31 4.50 waited=0min
+== rk_sb1.0_eprzw2r_r4100 exit=0
+Replay complete: 59325 successful, 675 failed, 0 skipped out of 0 total transfers
+EPR STATS successes=59325 steady_goodput=3455.3 whole_goodput=3495.5 lat_ms_p50=402.8 lat_ms_p90=2172.6 lat_ms_p99=2279.5 lat_ms_mean=802.3
+GOODPUT label=rk_sb1.0_eprzw2r_r4100 processed=60000/60000 success=59325 failed=675 elapsed_s=48.0 goodput_tps=1235.9
+STATECHECK(label words total highbytes raw_deltas empty committed): rk_sb1.0_eprzw2r_r4100 0 0 0 0 0 59329
+SBCHECK(label balances overdrawn raw_encoded): rk_sb1.0_eprzw2r_r4100 200000 0 0
+2026-11-05 02:45:29.371 UTC 0039 INFO [validator-committer] eprStatsLogger -> PILOT_EPR repaired_reads=34410 applied=56335 guard_fails=94 fast_deltas=10190 fast_progs=8659 snapshot_reads=7464 prefetch_hits=45062 prefetch_miss=0
+2026-11-05 02:45:29.362 UTC 0030 INFO [dependencygraph] func1 -> PILOT_ESCROW fast_debits=9751 slow_debits=9359 credits=28101
+REFINE_OK rk_sb1.0_eprzw2r at r=4100
+LOAD rk_sb1.0_eprzw2r_r4200 2.49 4.59 4.31 waited=0min
+== rk_sb1.0_eprzw2r_r4200 exit=0
+Replay complete: 59326 successful, 674 failed, 0 skipped out of 0 total transfers
+EPR STATS successes=59326 steady_goodput=2880.2 whole_goodput=2990.5 lat_ms_p50=1304.8 lat_ms_p90=5264.0 lat_ms_p99=5359.7 lat_ms_mean=2214.9
+GOODPUT label=rk_sb1.0_eprzw2r_r4200 processed=60000/60000 success=59326 failed=674 elapsed_s=50.0 goodput_tps=1186.5
+STATECHECK(label words total highbytes raw_deltas empty committed): rk_sb1.0_eprzw2r_r4200 0 0 0 0 0 59330
+SBCHECK(label balances overdrawn raw_encoded): rk_sb1.0_eprzw2r_r4200 200000 0 0
+2026-11-05 02:46:41.470 UTC 0038 INFO [validator-committer] eprStatsLogger -> PILOT_EPR repaired_reads=39483 applied=57529 guard_fails=169 fast_deltas=8974 fast_progs=7504 snapshot_reads=8575 prefetch_hits=51169 prefetch_miss=0
+2026-11-05 02:46:41.472 UTC 0030 INFO [dependencygraph] func1 -> PILOT_ESCROW fast_debits=9754 slow_debits=9412 credits=28142
+REFINE_OK rk_sb1.0_eprzw2r at r=4200
+LOAD rk_sb1.0_eprzw2r_r4300 1.84 3.96 4.12 waited=0min
+== rk_sb1.0_eprzw2r_r4300 exit=0
+Replay complete: 59308 successful, 692 failed, 0 skipped out of 0 total transfers
+EPR STATS successes=59308 steady_goodput=2627.4 whole_goodput=2784.5 lat_ms_p50=1823.6 lat_ms_p90=7070.0 lat_ms_p99=7188.1 lat_ms_mean=3099.2
+GOODPUT label=rk_sb1.0_eprzw2r_r4300 processed=60000/60000 success=59308 failed=692 elapsed_s=52.0 goodput_tps=1140.5
+STATECHECK(label words total highbytes raw_deltas empty committed): rk_sb1.0_eprzw2r_r4300 0 0 0 0 0 59312
+SBCHECK(label balances overdrawn raw_encoded): rk_sb1.0_eprzw2r_r4300 200000 0 0
+2026-11-05 02:47:55.808 UTC 0037 INFO [validator-committer] eprStatsLogger -> PILOT_EPR repaired_reads=40947 applied=57855 guard_fails=212 fast_deltas=8667 fast_progs=7186 snapshot_reads=8930 prefetch_hits=52847 prefetch_miss=0
+2026-11-05 02:47:55.807 UTC 002f INFO [dependencygraph] func1 -> PILOT_ESCROW fast_debits=9755 slow_debits=9440 credits=28163
+REFINE_OK rk_sb1.0_eprzw2r at r=4300
+LOAD rk_sb1.0_htf22r_r2369 1.66 3.53 3.96 waited=0min
+== rk_sb1.0_htf22r_r2369 exit=0
+Replay complete: 59377 successful, 623 failed, 0 skipped out of 0 total transfers
+EPR STATS successes=59377 steady_goodput=2341.9 whole_goodput=2336.0 lat_ms_p50=80.0 lat_ms_p90=107.6 lat_ms_p99=128.5 lat_ms_mean=81.1
+GOODPUT label=rk_sb1.0_htf22r_r2369 processed=59983/60000 success=59377 failed=606 elapsed_s=34.0 goodput_tps=1746.3
+STATECHECK(label words total highbytes raw_deltas empty committed): rk_sb1.0_htf22r_r2369 0 0 0 0 0 59381
+SBCHECK(label balances overdrawn raw_encoded): rk_sb1.0_htf22r_r2369 200000 0 0
+2026-11-05 02:49:24.161 UTC 003b INFO [validator-committer] eprStatsLogger -> PILOT_REEXEC calls=9663 txs=20132 micros=9041499 compared=0 mismatch=0 tx_compared=0 tx_mismatch=0 early_gossip=9663 reexec_all_committed=2591 reexec_all_reverted=0 reexec_all_new_keys=0
+2026/11/05 02:49:16 D16REEXEC requests=9663 txs=20132 reverted=12 conflict_reexec=0 avg_us_per_tx=358.4
+2026-11-05 02:49:24.161 UTC 003a INFO [validator-committer] eprStatsLogger -> PILOT_EPR repaired_reads=20361 applied=65016 guard_fails=63 fast_deltas=0 fast_progs=0 snapshot_reads=0 prefetch_hits=0 prefetch_miss=0
+REFINE_OK rk_sb1.0_htf22r at r=2369
+LOAD rk_sb1.0_htf22r_r2433 1.33 3.00 3.73 waited=0min
+== rk_sb1.0_htf22r_r2433 exit=0
+Replay complete: 59376 successful, 624 failed, 0 skipped out of 0 total transfers
+EPR STATS successes=59376 steady_goodput=2410.1 whole_goodput=2399.7 lat_ms_p50=85.0 lat_ms_p90=122.2 lat_ms_p99=159.3 lat_ms_mean=88.6
+GOODPUT label=rk_sb1.0_htf22r_r2433 processed=60000/60000 success=59376 failed=624 elapsed_s=64.0 goodput_tps=927.7
+STATECHECK(label words total highbytes raw_deltas empty committed): rk_sb1.0_htf22r_r2433 0 0 0 0 0 59380
+SBCHECK(label balances overdrawn raw_encoded): rk_sb1.0_htf22r_r2433 200000 0 0
+2026-11-05 02:50:52.916 UTC 003b INFO [validator-committer] eprStatsLogger -> PILOT_REEXEC calls=9635 txs=20736 micros=9063964 compared=0 mismatch=0 tx_compared=0 tx_mismatch=0 early_gossip=9635 reexec_all_committed=2705 reexec_all_reverted=0 reexec_all_new_keys=0
+2026/11/05 02:50:45 D16REEXEC requests=9635 txs=20736 reverted=17 conflict_reexec=0 avg_us_per_tx=348.3
+2026-11-05 02:50:52.916 UTC 003a INFO [validator-committer] eprStatsLogger -> PILOT_EPR repaired_reads=21048 applied=65006 guard_fails=75 fast_deltas=0 fast_progs=0 snapshot_reads=0 prefetch_hits=0 prefetch_miss=0
+REFINE_OK rk_sb1.0_htf22r at r=2433
+LOAD rk_sb1.0_htf22r_r2497 2.35 3.13 3.72 waited=0min
+== rk_sb1.0_htf22r_r2497 exit=0
+Replay complete: 59374 successful, 626 failed, 0 skipped out of 0 total transfers
+EPR STATS successes=59374 steady_goodput=2474.6 whole_goodput=2462.8 lat_ms_p50=125.0 lat_ms_p90=201.5 lat_ms_p99=273.8 lat_ms_mean=131.7
+GOODPUT label=rk_sb1.0_htf22r_r2497 processed=59978/60000 success=59374 failed=604 elapsed_s=26.0 goodput_tps=2283.5
+STATECHECK(label words total highbytes raw_deltas empty committed): rk_sb1.0_htf22r_r2497 0 0 0 0 0 59378
+SBCHECK(label balances overdrawn raw_encoded): rk_sb1.0_htf22r_r2497 200000 0 0
+2026-11-05 02:52:11.428 UTC 0036 INFO [validator-committer] eprStatsLogger -> PILOT_REEXEC calls=9757 txs=22955 micros=9470643 compared=0 mismatch=0 tx_compared=0 tx_mismatch=0 early_gossip=9757 reexec_all_committed=3089 reexec_all_reverted=0 reexec_all_new_keys=0
+2026/11/05 02:52:14 D16REEXEC requests=9757 txs=22955 reverted=22 conflict_reexec=0 avg_us_per_tx=329.6
+2026-11-05 02:52:11.428 UTC 0035 INFO [validator-committer] eprStatsLogger -> PILOT_EPR repaired_reads=23422 applied=65006 guard_fails=27 fast_deltas=0 fast_progs=0 snapshot_reads=0 prefetch_hits=0 prefetch_miss=0
+REFINE_OK rk_sb1.0_htf22r at r=2497
+S10C sweeps done
+STAGE_DONE s10c 2026-11-05 02:52:15

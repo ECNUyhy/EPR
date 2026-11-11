@@ -1,0 +1,4 @@
+STACK orderer_containers=16 committer_containers=6
+== mn44_usdc_htf2_rtt100_r3500 exit=124
+GOODPUT label=mn44_usdc_htf2_rtt100_r3500 processed=83383/151045 success=83383 failed=0 elapsed_s=386.0 goodput_tps=216.0
+STATE str_keys=51749 statuses=1:92374

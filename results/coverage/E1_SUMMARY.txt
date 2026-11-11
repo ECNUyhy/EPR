@@ -1,0 +1,55 @@
+== 0. coverage lines vs cov_1109b (fix_1109c tracer, Table II's write set): 64629 transactions, 64629 in both, 0 differ (expected 0)
+
+== 1. differential check on 21924 transactions with repairable content (endorser's write set)
+   by kind: {'program': 10172, 'mixed': 686, 'delta': 11066}
+   content writes 104372, of which value-preserving 21948
+   determinism: transactions with a differing repeated extraction: 0 (expected 0)
+   delta    self         n=  11066 | hold 11066 | match 11066 | MISMATCH 0 | oog (A7) 0 | fail 0 | fail/revert 0 | fail/oog 0 | fail/ok/same 0 | fail/ok 0 | forced wrong 0 | forced right 0
+   delta    small        n=  33198 | hold 25291 | match 25291 | MISMATCH 0 | oog (A7) 0 | fail 7907 | fail/revert 7888 | fail/oog 0 | fail/ok/same 19 | fail/ok 0 | forced wrong 7907 | forced right 0
+   delta    large        n=  22132 | hold 16557 | match 16557 | MISMATCH 0 | oog (A7) 0 | fail 5575 | fail/revert 5557 | fail/oog 0 | fail/ok/same 18 | fail/ok 0 | forced wrong 5574 | forced right 1
+   delta    lower_at     n=  10996 | hold 10996 | match 10996 | MISMATCH 0 | oog (A7) 0 | fail 0 | fail/revert 0 | fail/oog 0 | fail/ok/same 0 | fail/ok 0 | forced wrong 0 | forced right 0
+   delta    lower_below  n=  10996 | hold 0 | match 0 | MISMATCH 0 | oog (A7) 0 | fail 10996 | fail/revert 10962 | fail/oog 0 | fail/ok/same 34 | fail/ok 0 | forced wrong 10996 | forced right 0
+   delta    upper_at     n=      5 | hold 5 | match 5 | MISMATCH 0 | oog (A7) 0 | fail 0 | fail/revert 0 | fail/oog 0 | fail/ok/same 0 | fail/ok 0 | forced wrong 0 | forced right 0
+   delta    upper_above  n=      5 | hold 0 | match 0 | MISMATCH 0 | oog (A7) 0 | fail 5 | fail/revert 5 | fail/oog 0 | fail/ok/same 0 | fail/ok 0 | forced wrong 5 | forced right 0
+   mixed    self         n=    686 | hold 686 | match 686 | MISMATCH 0 | oog (A7) 0 | fail 0 | fail/revert 0 | fail/oog 0 | fail/ok/same 0 | fail/ok 0 | forced wrong 0 | forced right 0
+   mixed    small        n=   2058 | hold 2047 | match 2047 | MISMATCH 0 | oog (A7) 0 | fail 11 | fail/revert 9 | fail/oog 0 | fail/ok/same 2 | fail/ok 0 | forced wrong 11 | forced right 0
+   mixed    large        n=   1372 | hold 1362 | match 1362 | MISMATCH 0 | oog (A7) 0 | fail 10 | fail/revert 6 | fail/oog 0 | fail/ok/same 4 | fail/ok 0 | forced wrong 8 | forced right 2
+   mixed    lower_at     n=     86 | hold 86 | match 86 | MISMATCH 0 | oog (A7) 0 | fail 0 | fail/revert 0 | fail/oog 0 | fail/ok/same 0 | fail/ok 0 | forced wrong 0 | forced right 0
+   mixed    lower_below  n=     86 | hold 0 | match 0 | MISMATCH 0 | oog (A7) 0 | fail 86 | fail/revert 54 | fail/oog 0 | fail/ok/same 32 | fail/ok 0 | forced wrong 86 | forced right 0
+   mixed    upper_at     n=      1 | hold 1 | match 1 | MISMATCH 0 | oog (A7) 0 | fail 0 | fail/revert 0 | fail/oog 0 | fail/ok/same 0 | fail/ok 0 | forced wrong 0 | forced right 0
+   mixed    upper_above  n=      1 | hold 0 | match 0 | MISMATCH 0 | oog (A7) 0 | fail 1 | fail/revert 1 | fail/oog 0 | fail/ok/same 0 | fail/ok 0 | forced wrong 1 | forced right 0
+   program  self         n=  10172 | hold 10172 | match 10172 | MISMATCH 0 | oog (A7) 0 | fail 0 | fail/revert 0 | fail/oog 0 | fail/ok/same 0 | fail/ok 0 | forced wrong 0 | forced right 0
+   program  small        n=  30516 | hold 10586 | match 10586 | MISMATCH 0 | oog (A7) 0 | fail 19930 | fail/revert 17112 | fail/oog 6 | fail/ok/same 2358 | fail/ok 454 | forced wrong 19508 | forced right 422
+   program  large        n=  20344 | hold 6987 | match 6987 | MISMATCH 0 | oog (A7) 0 | fail 13357 | fail/revert 11498 | fail/oog 22 | fail/ok/same 1558 | fail/ok 279 | forced wrong 13082 | forced right 275
+   perturbed samples 131796; guards hold 73918, of which match 73918; mismatches (all samples) 0 (expected 0)
+   guards fail 57878: re-execution reverts 53120; evaluated without guards, the content would be wrong in 57178 and right in 700
+   mismatch reasons: {}
+
+   by contract (transactions, perturbed samples, guards hold, mismatches):
+   Uniswap V2 Router02               202    1010      17    0
+   Uniswap UniversalRouter (V4)      286    1432      21    0
+   Uniswap UniversalRouter             1       5       5    0
+   Uniswap SwapRouter02                0       0       0    0
+   1inch v6                           56     280     215    0
+   USDT                             7452   51626   34747    0
+   USDC                             3589   24103   16408    0
+   distinct target contracts: 2588 ; programs over distinct targets: 2348
+
+== 3. Table II under the endorser's write set (every kept SSTORE; Headroom column only; Strict is not computed)
+transactions ok: 64529
+Scope                                     Count   Strict  Headroom
+Direct calls, all                         48.4k    85.6%     85.6%
+Direct calls, hot                         18.5k    83.3%     83.3%
+Indirect calls, all                      192.3k    18.9%     18.9%
+Indirect calls, hot                       64.9k    23.6%     23.6%
+Hot-slot txs, all writes repairable       19.4k    71.3%     71.3%
+== 3b. split
+txs ok 64529
+scope                       n | strict: delta   prog  total | headroom: delta   prog  total | delta share of headroom-repairable
+Direct calls, all        48373 |  44.6%  41.0%  85.6% |  44.6%  41.0%  85.6% |  52.1%
+Direct calls, hot        18493 |  44.5%  38.8%  83.3% |  44.5%  38.8%  83.3% |  53.4%
+Indirect calls, all     192324 |   0.7%  18.1%  18.9% |   0.7%  18.1%  18.9% |   3.8%
+Indirect calls, hot      64863 |   0.9%  22.7%  23.6% |   0.9%  22.7%  23.6% |   3.7%
+USDC direct hot           2569 |  83.8%  15.9%  99.7% |  83.8%  15.9%  99.7% |  84.1%
+USDT direct hot           5943 |  98.2%   1.8% 100.0% |  98.2%   1.8% 100.0% |  98.2%
+hot-slot txs 19426: strict all 71.3% (delta-only 38.3%); headroom all 71.3% (delta-only 38.3%)

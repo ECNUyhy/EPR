@@ -1,0 +1,4 @@
+STACK orderer_containers=16 committer_containers=6
+== mn44_usdc_fpp_rtt20_r75 exit=124
+GOODPUT label=mn44_usdc_fpp_rtt20_r75 processed=945/151045 success=945 failed=0 elapsed_s=18.0 goodput_tps=52.5
+STATE str_keys=48139 statuses=1:948,3:1302

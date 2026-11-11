@@ -1,0 +1,4 @@
+STACK orderer_containers=16 committer_containers=6
+== mn44_usdt_fpp_rtt100_r50 exit=124
+GOODPUT label=mn44_usdt_fpp_rtt100_r50 processed=230/88879 success=230 failed=0 elapsed_s=12.0 goodput_tps=19.2
+STATE str_keys=29452 statuses=1:233,3:324

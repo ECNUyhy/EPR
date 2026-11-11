@@ -1,0 +1,503 @@
+LOAD control_s15a_1 0.18 1.28 2.32 waited=5min
+== ctl1_s15a_z0.8_htf2_r2000 exit=0
+Replay complete: 60000 successful, 0 failed, 0 skipped out of 0 total transfers
+EPR STATS successes=60000 steady_goodput=2000.4 whole_goodput=2006.0 lat_ms_p50=75.4 lat_ms_p90=98.6 lat_ms_p99=124.2 lat_ms_mean=75.8
+GOODPUT label=ctl1_s15a_z0.8_htf2_r2000 processed=59800/60000 success=59800 failed=0 elapsed_s=30.0 goodput_tps=1993.3
+STATECHECK(label words total highbytes raw_deltas empty committed): ctl1_s15a_z0.8_htf2_r2000 9819 9037000029928052010165 1 0 0 60004
+2026-11-05 03:08:05.735 UTC 002c INFO [validator-committer] eprStatsLogger -> PILOT_REEXEC calls=7457 txs=24377 micros=10793648 compared=0 mismatch=0 tx_compared=0 tx_mismatch=0 early_gossip=7457 reexec_all_committed=0 reexec_all_reverted=0 reexec_all_new_keys=0
+2026/11/05 03:08:03 D16REEXEC requests=6880 txs=22448 reverted=0 conflict_reexec=0 avg_us_per_tx=369.6
+2026-11-05 03:08:05.735 UTC 002b INFO [validator-committer] eprStatsLogger -> PILOT_EPR repaired_reads=28332 applied=116166 guard_fails=0 fast_deltas=0 fast_progs=0 snapshot_reads=0 prefetch_hits=0 prefetch_miss=0
+CONTROL s15a try=1 z0.8 htf2 r=2000 goodput=1993 october=1993 ratio=1.000 gate=1
+== ctl1_s15a_sb1.0_htf2_r2000 exit=0
+Replay complete: 59394 successful, 606 failed, 0 skipped out of 0 total transfers
+EPR STATS successes=59394 steady_goodput=1977.3 whole_goodput=1974.6 lat_ms_p50=72.3 lat_ms_p90=94.6 lat_ms_p99=114.2 lat_ms_mean=72.6
+GOODPUT label=ctl1_s15a_sb1.0_htf2_r2000 processed=59844/60000 success=59238 failed=606 elapsed_s=30.0 goodput_tps=1974.5
+STATECHECK(label words total highbytes raw_deltas empty committed): ctl1_s15a_sb1.0_htf2_r2000 0 0 0 0 0 59398
+2026-11-05 03:08:57.956 UTC 002e INFO [validator-committer] eprStatsLogger -> PILOT_REEXEC calls=9297 txs=18576 micros=8158321 compared=0 mismatch=0 tx_compared=0 tx_mismatch=0 early_gossip=9297 reexec_all_committed=2216 reexec_all_reverted=0 reexec_all_new_keys=0
+2026/11/05 03:08:53 D16REEXEC requests=7864 txs=15557 reverted=8 conflict_reexec=0 avg_us_per_tx=353.1
+2026-11-05 03:08:57.956 UTC 002d INFO [validator-committer] eprStatsLogger -> PILOT_EPR repaired_reads=18847 applied=64980 guard_fails=8 fast_deltas=0 fast_progs=0 snapshot_reads=0 prefetch_hits=0 prefetch_miss=0
+CONTROL s15a try=1 sb1.0 htf2 r=2000 goodput=1974 october=1974 ratio=1.000 gate=0
+LOAD rk_dex16_fifo_r137 4.95 2.61 2.66 waited=0min
+== rk_dex16_fifo_r137 exit=0
+Replay complete: 16379 successful, 61 failed, 0 skipped out of 0 total transfers
+EPR STATS successes=16379 steady_goodput=136.5 whole_goodput=134.2 lat_ms_p50=320.8 lat_ms_p90=1794.3 lat_ms_p99=4069.3 lat_ms_mean=712.6
+GOODPUT label=rk_dex16_fifo_r137 processed=16438/30000 success=16377 failed=61 elapsed_s=122.0 goodput_tps=134.2
+STATECHECK(label words total highbytes raw_deltas empty committed): rk_dex16_fifo_r137 0 0 0 0 0 16383
+REFINE_OK rk_dex16_fifo at r=137
+LOAD rk_dex16_fifo_r175 4.82 2.89 2.72 waited=0min
+== rk_dex16_fifo_r175 exit=0
+Replay complete: 20865 successful, 135 failed, 0 skipped out of 0 total transfers
+EPR STATS successes=20865 steady_goodput=174.1 whole_goodput=169.5 lat_ms_p50=249.3 lat_ms_p90=1441.6 lat_ms_p99=3235.0 lat_ms_mean=558.0
+GOODPUT label=rk_dex16_fifo_r175 processed=20988/30000 success=20853 failed=135 elapsed_s=122.0 goodput_tps=170.9
+STATECHECK(label words total highbytes raw_deltas empty committed): rk_dex16_fifo_r175 0 0 0 0 0 20869
+REFINE_OK rk_dex16_fifo at r=175
+LOAD rk_dex16_fifo_r212 2.13 2.59 2.63 waited=0min
+== rk_dex16_fifo_r212 exit=0
+Replay complete: 25184 successful, 256 failed, 0 skipped out of 0 total transfers
+EPR STATS successes=25184 steady_goodput=210.1 whole_goodput=206.3 lat_ms_p50=197.2 lat_ms_p90=1225.0 lat_ms_p99=2876.5 lat_ms_mean=456.6
+GOODPUT label=rk_dex16_fifo_r212 processed=25438/30000 success=25182 failed=256 elapsed_s=122.0 goodput_tps=206.4
+STATECHECK(label words total highbytes raw_deltas empty committed): rk_dex16_fifo_r212 0 0 0 0 0 25188
+REFINE_OK rk_dex16_fifo at r=212
+LOAD rk_sb0.8_fifo_r562 2.23 2.56 2.62 waited=0min
+== rk_sb0.8_fifo_r562 exit=0
+Replay complete: 58780 successful, 1220 failed, 0 skipped out of 0 total transfers
+EPR STATS successes=58780 steady_goodput=550.1 whole_goodput=528.7 lat_ms_p50=132.0 lat_ms_p90=183.2 lat_ms_p99=938.4 lat_ms_mean=164.6
+GOODPUT label=rk_sb0.8_fifo_r562 processed=59993/60000 success=58773 failed=1220 elapsed_s=110.0 goodput_tps=534.3
+STATECHECK(label words total highbytes raw_deltas empty committed): rk_sb0.8_fifo_r562 0 0 0 0 0 58784
+REFINE_STOP rk_sb0.8_fifo at r=562 (saturated)
+LOAD rk_sb1.0_fifo_r137 1.26 2.01 2.40 waited=0min
+== rk_sb1.0_fifo_r137 exit=0
+Replay complete: 15738 successful, 702 failed, 0 skipped out of 0 total transfers
+EPR STATS successes=15738 steady_goodput=130.7 whole_goodput=124.7 lat_ms_p50=228.3 lat_ms_p90=443.6 lat_ms_p99=6040.4 lat_ms_mean=403.4
+GOODPUT label=rk_sb1.0_fifo_r137 processed=16436/60000 success=15736 failed=700 elapsed_s=126.0 goodput_tps=124.9
+STATECHECK(label words total highbytes raw_deltas empty committed): rk_sb1.0_fifo_r137 0 0 0 0 0 15742
+REFINE_STOP rk_sb1.0_fifo at r=137 (saturated)
+LOAD rk_usdc_fifo_r137 1.16 1.68 2.21 waited=0min
+== rk_usdc_fifo_r137 exit=0
+Replay complete: 15753 successful, 687 failed, 0 skipped out of 0 total transfers
+EPR STATS successes=15753 steady_goodput=130.1 whole_goodput=124.8 lat_ms_p50=277.8 lat_ms_p90=1420.2 lat_ms_p99=6883.1 lat_ms_mean=679.3
+GOODPUT label=rk_usdc_fifo_r137 processed=16435/151045 success=15748 failed=687 elapsed_s=126.0 goodput_tps=125.0
+STATECHECK(label words total highbytes raw_deltas empty committed): rk_usdc_fifo_r137 48757 48108003660031865732317 1 0 0 15757
+REFINE_STOP rk_usdc_fifo at r=137 (saturated)
+LOAD rk_usdt_fifo_r127 1.45 1.93 2.24 waited=0min
+== rk_usdt_fifo_r127 exit=0
+Replay complete: 15052 successful, 188 failed, 0 skipped out of 0 total transfers
+EPR STATS successes=15052 steady_goodput=126.2 whole_goodput=115.3 lat_ms_p50=237.8 lat_ms_p90=1753.5 lat_ms_p99=6404.1 lat_ms_mean=679.1
+GOODPUT label=rk_usdt_fifo_r127 processed=15232/88879 success=15048 failed=184 elapsed_s=130.0 goodput_tps=115.8
+STATECHECK(label words total highbytes raw_deltas empty committed): rk_usdt_fifo_r127 31675 29371018213451559587193 1 0 0 15056
+REFINE_NEXT rk_usdt_fifo at r=127
+LOAD rk_usdt_fifo_r118 4.90 2.79 2.49 waited=0min
+== rk_usdt_fifo_r118 exit=0
+Replay complete: 14083 successful, 77 failed, 0 skipped out of 0 total transfers
+EPR STATS successes=14083 steady_goodput=117.1 whole_goodput=114.5 lat_ms_p50=234.3 lat_ms_p90=1728.9 lat_ms_p99=5817.6 lat_ms_mean=657.9
+GOODPUT label=rk_usdt_fifo_r118 processed=14140/88879 success=14064 failed=76 elapsed_s=122.0 goodput_tps=115.3
+STATECHECK(label words total highbytes raw_deltas empty committed): rk_usdt_fifo_r118 31557 29371018213451559587193 1 0 0 14087
+REFINE_OK rk_usdt_fifo at r=118
+LOAD rk_usdt_fifo_r146 1.07 2.00 2.24 waited=0min
+== rk_usdt_fifo_r146 exit=0
+Replay complete: 17026 successful, 494 failed, 0 skipped out of 0 total transfers
+EPR STATS successes=17026 steady_goodput=141.4 whole_goodput=122.1 lat_ms_p50=265.2 lat_ms_p90=2154.2 lat_ms_p99=16306.1 lat_ms_mean=1005.9
+GOODPUT label=rk_usdt_fifo_r146 processed=17447/88879 success=17002 failed=445 elapsed_s=138.0 goodput_tps=123.2
+STATECHECK(label words total highbytes raw_deltas empty committed): rk_usdt_fifo_r146 31963 29371018213451559587193 1 0 0 17030
+REFINE_STOP rk_usdt_fifo at r=146 (saturated)
+LOAD rk_z0_fifo_r13250 3.10 2.12 2.21 waited=0min
+== rk_z0_fifo_r13250 exit=0
+Replay complete: 60000 successful, 0 failed, 0 skipped out of 0 total transfers
+EPR STATS successes=60000 steady_goodput=13322.7 whole_goodput=12257.5 lat_ms_p50=30.2 lat_ms_p90=57.2 lat_ms_p99=93.9 lat_ms_mean=35.5
+GOODPUT label=rk_z0_fifo_r13250 processed=52559/60000 success=52559 failed=0 elapsed_s=4.0 goodput_tps=13136.4
+STATECHECK(label words total highbytes raw_deltas empty committed): rk_z0_fifo_r13250 10001 9973000029957321861212 1 0 0 60004
+REFINE_STOP rk_z0_fifo at r=13250 (saturated)
+LOAD rk_z0.8_fifo_r137 3.21 2.21 2.24 waited=0min
+== rk_z0.8_fifo_r137 exit=0
+Replay complete: 15888 successful, 552 failed, 0 skipped out of 0 total transfers
+EPR STATS successes=15888 steady_goodput=132.1 whole_goodput=125.9 lat_ms_p50=220.1 lat_ms_p90=462.1 lat_ms_p99=6587.0 lat_ms_mean=419.6
+GOODPUT label=rk_z0.8_fifo_r137 processed=16438/60000 success=15886 failed=552 elapsed_s=126.0 goodput_tps=126.1
+STATECHECK(label words total highbytes raw_deltas empty committed): rk_z0.8_fifo_r137 9410 9037000029928052010165 1 0 0 15892
+REFINE_STOP rk_z0.8_fifo at r=137 (saturated)
+LOAD rk_dex1_fpp_r6 0.93 1.64 2.02 waited=0min
+== rk_dex1_fpp_r6 exit=0
+Replay complete: 42 successful, 193 failed, 0 skipped out of 0 total transfers
+EPR STATS successes=42 steady_goodput=5.0 whole_goodput=4.9 lat_ms_p50=99.2 lat_ms_p90=165.0 lat_ms_p99=204.7 lat_ms_mean=105.9
+GOODPUT label=rk_dex1_fpp_r6 processed=42/30000 success=42 failed=0 elapsed_s=10.0 goodput_tps=4.2
+STATECHECK(label words total highbytes raw_deltas empty committed): rk_dex1_fpp_r6 0 0 0 0 0 46
+2026-11-05 03:35:20.893 UTC 001f INFO [dependencygraph] func1 -> PILOT_REORDER batches=41 early_aborted=192
+REFINE_STOP rk_dex1_fpp at r=6 (saturated)
+LOAD rk_dex16_fpp_r31 1.09 1.54 1.96 waited=0min
+== rk_dex16_fpp_r31 exit=0
+Replay complete: 3720 successful, 0 failed, 0 skipped out of 0 total transfers
+EPR STATS successes=3720 steady_goodput=31.0 whole_goodput=31.0 lat_ms_p50=114.4 lat_ms_p90=369.7 lat_ms_p99=968.0 lat_ms_mean=162.7
+GOODPUT label=rk_dex16_fpp_r31 processed=3714/30000 success=3714 failed=0 elapsed_s=120.0 goodput_tps=30.9
+STATECHECK(label words total highbytes raw_deltas empty committed): rk_dex16_fpp_r31 0 0 0 0 0 3724
+2026-11-05 03:37:45.178 UTC 0030 INFO [dependencygraph] func1 -> PILOT_REORDER batches=593 early_aborted=968
+REFINE_OK rk_dex16_fpp at r=31
+LOAD rk_dex16_fpp_r37 0.58 1.21 1.77 waited=0min
+== rk_dex16_fpp_r37 exit=0
+Replay complete: 4440 successful, 0 failed, 0 skipped out of 0 total transfers
+EPR STATS successes=4440 steady_goodput=37.1 whole_goodput=37.0 lat_ms_p50=118.6 lat_ms_p90=402.7 lat_ms_p99=1208.4 lat_ms_mean=188.3
+GOODPUT label=rk_dex16_fpp_r37 processed=4431/30000 success=4431 failed=0 elapsed_s=120.0 goodput_tps=36.9
+STATECHECK(label words total highbytes raw_deltas empty committed): rk_dex16_fpp_r37 0 0 0 0 0 4444
+2026-11-05 03:40:07.399 UTC 0030 INFO [dependencygraph] func1 -> PILOT_REORDER batches=593 early_aborted=1664
+REFINE_OK rk_dex16_fpp at r=37
+LOAD rk_dex16_fpp_r43 0.41 0.96 1.60 waited=0min
+== rk_dex16_fpp_r43 exit=0
+Replay complete: 5160 successful, 0 failed, 0 skipped out of 0 total transfers
+EPR STATS successes=5160 steady_goodput=43.1 whole_goodput=42.9 lat_ms_p50=121.9 lat_ms_p90=542.7 lat_ms_p99=1614.6 lat_ms_mean=221.9
+GOODPUT label=rk_dex16_fpp_r43 processed=5147/30000 success=5147 failed=0 elapsed_s=120.0 goodput_tps=42.9
+STATECHECK(label words total highbytes raw_deltas empty committed): rk_dex16_fpp_r43 0 0 0 0 0 5164
+2026-11-05 03:42:29.655 UTC 0030 INFO [dependencygraph] func1 -> PILOT_REORDER batches=597 early_aborted=2745
+REFINE_OK rk_dex16_fpp at r=43
+LOAD rk_sb0_fpp_r4125 0.26 0.70 1.41 waited=0min
+== rk_sb0_fpp_r4125 exit=0
+Replay complete: 58871 successful, 1129 failed, 0 skipped out of 0 total transfers
+EPR STATS successes=58871 steady_goodput=3694.4 whole_goodput=3660.6 lat_ms_p50=666.0 lat_ms_p90=1256.2 lat_ms_p99=2188.9 lat_ms_mean=702.5
+GOODPUT label=rk_sb0_fpp_r4125 processed=59999/60000 success=58870 failed=1129 elapsed_s=16.0 goodput_tps=3679.0
+STATECHECK(label words total highbytes raw_deltas empty committed): rk_sb0_fpp_r4125 0 0 0 0 0 58875
+2026-11-05 03:43:06.155 UTC 001b INFO [dependencygraph] func1 -> PILOT_REORDER batches=489 early_aborted=32
+REFINE_STOP rk_sb0_fpp at r=4125 (saturated)
+LOAD rk_sb0.6_fpp_r3562 1.40 0.92 1.46 waited=0min
+== rk_sb0.6_fpp_r3562 exit=0
+Replay complete: 58638 successful, 1362 failed, 0 skipped out of 0 total transfers
+EPR STATS successes=58638 steady_goodput=3412.8 whole_goodput=3249.5 lat_ms_p50=61.7 lat_ms_p90=358.5 lat_ms_p99=1191.4 lat_ms_mean=157.7
+GOODPUT label=rk_sb0.6_fpp_r3562 processed=59776/60000 success=58638 failed=1138 elapsed_s=20.0 goodput_tps=2931.6
+STATECHECK(label words total highbytes raw_deltas empty committed): rk_sb0.6_fpp_r3562 0 0 0 0 0 58642
+2026-11-05 03:44:15.823 UTC 0021 INFO [dependencygraph] func1 -> PILOT_REORDER batches=618 early_aborted=1015
+REFINE_STOP rk_sb0.6_fpp at r=3562 (saturated)
+LOAD rk_sb0.8_fpp_r137 5.64 2.01 1.78 waited=0min
+== rk_sb0.8_fpp_r137 exit=0
+Replay complete: 16352 successful, 88 failed, 0 skipped out of 0 total transfers
+EPR STATS successes=16352 steady_goodput=136.2 whole_goodput=136.3 lat_ms_p50=112.6 lat_ms_p90=194.6 lat_ms_p99=330.8 lat_ms_mean=116.3
+GOODPUT label=rk_sb0.8_fpp_r137 processed=16429/60000 success=16341 failed=88 elapsed_s=120.0 goodput_tps=136.2
+STATECHECK(label words total highbytes raw_deltas empty committed): rk_sb0.8_fpp_r137 0 0 0 0 0 16356
+2026-11-05 03:46:45.429 UTC 0030 INFO [dependencygraph] func1 -> PILOT_REORDER batches=596 early_aborted=288
+REFINE_OK rk_sb0.8_fpp at r=137
+LOAD rk_sb0.8_fpp_r175 1.17 1.77 1.75 waited=0min
+== rk_sb0.8_fpp_r175 exit=0
+Replay complete: 20859 successful, 141 failed, 0 skipped out of 0 total transfers
+EPR STATS successes=20859 steady_goodput=173.7 whole_goodput=173.8 lat_ms_p50=115.4 lat_ms_p90=197.3 lat_ms_p99=393.1 lat_ms_mean=121.8
+GOODPUT label=rk_sb0.8_fpp_r175 processed=20991/60000 success=20850 failed=141 elapsed_s=120.0 goodput_tps=173.7
+STATECHECK(label words total highbytes raw_deltas empty committed): rk_sb0.8_fpp_r175 0 0 0 0 0 20863
+2026-11-05 03:49:06.972 UTC 0030 INFO [dependencygraph] func1 -> PILOT_REORDER batches=587 early_aborted=680
+REFINE_OK rk_sb0.8_fpp at r=175
+LOAD rk_sb0.8_fpp_r212 0.52 1.25 1.55 waited=0min
+== rk_sb0.8_fpp_r212 exit=0
+Replay complete: 25240 successful, 200 failed, 0 skipped out of 0 total transfers
+EPR STATS successes=25240 steady_goodput=210.2 whole_goodput=210.4 lat_ms_p50=118.7 lat_ms_p90=201.4 lat_ms_p99=414.6 lat_ms_mean=130.5
+GOODPUT label=rk_sb0.8_fpp_r212 processed=25423/60000 success=25223 failed=200 elapsed_s=120.0 goodput_tps=210.2
+STATECHECK(label words total highbytes raw_deltas empty committed): rk_sb0.8_fpp_r212 0 0 0 0 0 25244
+2026-11-05 03:51:30.420 UTC 0030 INFO [dependencygraph] func1 -> PILOT_REORDER batches=585 early_aborted=1475
+REFINE_OK rk_sb0.8_fpp at r=212
+LOAD rk_sb1.0_fpp_r62 0.50 0.95 1.39 waited=0min
+== rk_sb1.0_fpp_r62 exit=124
+GOODPUT label=rk_sb1.0_fpp_r62 processed=1664/60000 success=1655 failed=9 elapsed_s=118.0 goodput_tps=14.0
+STATECHECK(label words total highbytes raw_deltas empty committed): rk_sb1.0_fpp_r62 0 0 0 0 0 1659
+2026-11-05 03:53:04.536 UTC 0026 INFO [dependencygraph] func1 -> PILOT_REORDER batches=140 early_aborted=233
+REFINE_STOP rk_sb1.0_fpp at r=62
+LOAD rk_sb1.2_fpp_r13 0.24 0.69 1.17 waited=0min
+== rk_sb1.2_fpp_r13 exit=0
+Replay complete: 1559 successful, 1 failed, 0 skipped out of 0 total transfers
+EPR STATS successes=1559 steady_goodput=13.0 whole_goodput=13.0 lat_ms_p50=109.5 lat_ms_p90=194.5 lat_ms_p99=593.4 lat_ms_mean=124.6
+GOODPUT label=rk_sb1.2_fpp_r13 processed=1557/60000 success=1556 failed=1 elapsed_s=120.0 goodput_tps=13.0
+STATECHECK(label words total highbytes raw_deltas empty committed): rk_sb1.2_fpp_r13 0 0 0 0 0 1563
+2026-11-05 03:58:57.313 UTC 002f INFO [dependencygraph] func1 -> PILOT_REORDER batches=573 early_aborted=120
+REFINE_OK rk_sb1.2_fpp at r=13
+LOAD rk_sb1.2_fpp_r17 0.62 0.72 1.11 waited=0min
+== rk_sb1.2_fpp_r17 exit=0
+Replay complete: 2039 successful, 1 failed, 0 skipped out of 0 total transfers
+EPR STATS successes=2039 steady_goodput=17.0 whole_goodput=17.0 lat_ms_p50=109.3 lat_ms_p90=197.7 lat_ms_p99=894.4 lat_ms_mean=135.7
+GOODPUT label=rk_sb1.2_fpp_r17 processed=2038/60000 success=2037 failed=1 elapsed_s=120.0 goodput_tps=17.0
+STATECHECK(label words total highbytes raw_deltas empty committed): rk_sb1.2_fpp_r17 0 0 0 0 0 2043
+2026-11-05 04:01:23.236 UTC 0030 INFO [dependencygraph] func1 -> PILOT_REORDER batches=589 early_aborted=274
+REFINE_OK rk_sb1.2_fpp at r=17
+LOAD rk_sb1.2_fpp_r21 0.25 0.55 0.99 waited=0min
+== rk_sb1.2_fpp_r21 exit=0
+Replay complete: 2518 successful, 2 failed, 0 skipped out of 0 total transfers
+EPR STATS successes=2518 steady_goodput=20.9 whole_goodput=21.0 lat_ms_p50=112.0 lat_ms_p90=200.5 lat_ms_p99=1196.2 lat_ms_mean=151.9
+GOODPUT label=rk_sb1.2_fpp_r21 processed=2517/60000 success=2515 failed=2 elapsed_s=120.0 goodput_tps=21.0
+STATECHECK(label words total highbytes raw_deltas empty committed): rk_sb1.2_fpp_r21 0 0 0 0 0 2522
+2026-11-05 04:03:46.210 UTC 0030 INFO [dependencygraph] func1 -> PILOT_REORDER batches=598 early_aborted=504
+REFINE_OK rk_sb1.2_fpp at r=21
+LOAD rk_usdc_fpp_r31 0.19 0.43 0.88 waited=0min
+== rk_usdc_fpp_r31 exit=0
+Replay complete: 3720 successful, 0 failed, 0 skipped out of 0 total transfers
+EPR STATS successes=3720 steady_goodput=31.0 whole_goodput=31.0 lat_ms_p50=129.7 lat_ms_p90=403.9 lat_ms_p99=1533.9 lat_ms_mean=208.4
+GOODPUT label=rk_usdc_fpp_r31 processed=3715/151045 success=3715 failed=0 elapsed_s=120.0 goodput_tps=31.0
+STATECHECK(label words total highbytes raw_deltas empty committed): rk_usdc_fpp_r31 48252 48108003660031865732317 1 0 0 3724
+2026-11-05 04:06:07.390 UTC 0030 INFO [dependencygraph] func1 -> PILOT_REORDER batches=589 early_aborted=1740
+REFINE_OK rk_usdc_fpp at r=31
+LOAD rk_usdc_fpp_r37 0.34 0.41 0.81 waited=0min
+== rk_usdc_fpp_r37 exit=124
+GOODPUT label=rk_usdc_fpp_r37 processed=800/151045 success=800 failed=0 elapsed_s=24.0 goodput_tps=33.3
+STATECHECK(label words total highbytes raw_deltas empty committed): rk_usdc_fpp_r37 48124 48108003660031865732317 1 0 0 804
+2026-11-05 04:07:50.560 UTC 0028 INFO [dependencygraph] func1 -> PILOT_REORDER batches=110 early_aborted=426
+REFINE_STOP rk_usdc_fpp at r=37
+LOAD rk_usdt_fpp_r13 0.10 0.39 0.71 waited=0min
+== rk_usdt_fpp_r13 exit=1
+GOODPUT label=rk_usdt_fpp_r13 processed=109/88879 success=109 failed=0 elapsed_s=12.0 goodput_tps=9.1
+STATECHECK(label words total highbytes raw_deltas empty committed): rk_usdt_fpp_r13 29391 29371018213451559587193 1 0 0 113
+2026-11-05 04:12:20.161 UTC 0020 INFO [dependencygraph] func1 -> PILOT_REORDER batches=56 early_aborted=94
+REFINE_STOP rk_usdt_fpp at r=13
+LOAD rk_z0_fpp_r3312 0.90 0.53 0.73 waited=0min
+== rk_z0_fpp_r3312 exit=0
+Replay complete: 60000 successful, 0 failed, 0 skipped out of 0 total transfers
+EPR STATS successes=60000 steady_goodput=3313.4 whole_goodput=3245.1 lat_ms_p50=58.9 lat_ms_p90=75.8 lat_ms_p99=130.3 lat_ms_mean=62.8
+GOODPUT label=rk_z0_fpp_r3312 processed=59425/60000 success=59425 failed=0 elapsed_s=18.0 goodput_tps=3301.2
+STATECHECK(label words total highbytes raw_deltas empty committed): rk_z0_fpp_r3312 10001 9973000029957321861212 1 0 0 60004
+2026-11-05 04:13:00.977 UTC 001b INFO [dependencygraph] func1 -> PILOT_REORDER batches=521 early_aborted=987
+REFINE_OK rk_z0_fpp at r=3312
+LOAD rk_z0_fpp_r3375 2.48 0.92 0.85 waited=0min
+== rk_z0_fpp_r3375 exit=0
+Replay complete: 60000 successful, 0 failed, 0 skipped out of 0 total transfers
+EPR STATS successes=60000 steady_goodput=1519.8 whole_goodput=1564.5 lat_ms_p50=395.1 lat_ms_p90=18465.6 lat_ms_p99=24282.5 lat_ms_mean=4787.8
+GOODPUT label=rk_z0_fpp_r3375 processed=59994/60000 success=59994 failed=0 elapsed_s=38.0 goodput_tps=1578.7
+STATECHECK(label words total highbytes raw_deltas empty committed): rk_z0_fpp_r3375 10001 9973000029957321861212 1 0 0 60004
+2026-11-05 04:14:06.317 UTC 0020 INFO [dependencygraph] func1 -> PILOT_REORDER batches=1398 early_aborted=4032
+REFINE_STOP rk_z0_fpp at r=3375 (saturated)
+LOAD rk_z0.6_fpp_r184 5.71 2.14 1.28 waited=0min
+== rk_z0.6_fpp_r184 exit=0
+Replay complete: 22080 successful, 0 failed, 0 skipped out of 0 total transfers
+EPR STATS successes=22080 steady_goodput=183.7 whole_goodput=184.3 lat_ms_p50=119.0 lat_ms_p90=203.5 lat_ms_p99=555.2 lat_ms_mean=133.3
+GOODPUT label=rk_z0.6_fpp_r184 processed=22050/60000 success=22050 failed=0 elapsed_s=120.0 goodput_tps=183.8
+STATECHECK(label words total highbytes raw_deltas empty committed): rk_z0.6_fpp_r184 9896 9692000029953895126708 1 0 0 22084
+2026-11-05 04:16:29.501 UTC 0030 INFO [dependencygraph] func1 -> PILOT_REORDER batches=596 early_aborted=1509
+REFINE_OK rk_z0.6_fpp at r=184
+LOAD rk_z0.6_fpp_r193 1.17 1.58 1.18 waited=0min
+== rk_z0.6_fpp_r193 exit=124
+GOODPUT label=rk_z0.6_fpp_r193 processed=19156/60000 success=19156 failed=0 elapsed_s=100.0 goodput_tps=191.6
+STATECHECK(label words total highbytes raw_deltas empty committed): rk_z0.6_fpp_r193 9883 9692000029953895126708 1 0 0 19160
+2026-11-05 04:19:00.939 UTC 0032 INFO [dependencygraph] func1 -> PILOT_REORDER batches=495 early_aborted=1308
+REFINE_STOP rk_z0.6_fpp at r=193
+LOAD rk_dex1_fs_r8 0.38 0.89 0.99 waited=0min
+== rk_dex1_fs_r8 exit=0
+Replay complete: 632 successful, 328 failed, 0 skipped out of 0 total transfers
+EPR STATS successes=632 steady_goodput=5.0 whole_goodput=5.0 lat_ms_p50=5558.7 lat_ms_p90=9015.8 lat_ms_p99=10165.3 lat_ms_mean=5461.1
+GOODPUT label=rk_dex1_fs_r8 processed=950/30000 success=625 failed=325 elapsed_s=126.0 goodput_tps=5.0
+STATECHECK(label words total highbytes raw_deltas empty committed): rk_dex1_fs_r8 0 0 0 0 0 636
+2026-11-05 04:24:01.680 UTC 0031 INFO [dependencygraph] func1 -> PILOT_FABRICSHARP blocks=620 accepted=617 stale_accepted=0 early_aborted=33283 span_dropped=0 deserted=0 no_snapshot=1 exact=false
+REFINE_NEXT rk_dex1_fs at r=8
+LOAD rk_dex1_fs_r7 1.21 1.20 1.10 waited=0min
+== rk_dex1_fs_r7 exit=0
+Replay complete: 633 successful, 207 failed, 0 skipped out of 0 total transfers
+EPR STATS successes=633 steady_goodput=5.0 whole_goodput=5.0 lat_ms_p50=4924.8 lat_ms_p90=9030.0 lat_ms_p99=10141.7 lat_ms_mean=5109.1
+GOODPUT label=rk_dex1_fs_r7 processed=833/30000 success=626 failed=207 elapsed_s=126.0 goodput_tps=5.0
+STATECHECK(label words total highbytes raw_deltas empty committed): rk_dex1_fs_r7 0 0 0 0 0 637
+2026-11-05 04:26:32.036 UTC 0031 INFO [dependencygraph] func1 -> PILOT_FABRICSHARP blocks=619 accepted=616 stale_accepted=0 early_aborted=26065 span_dropped=0 deserted=0 no_snapshot=1 exact=false
+REFINE_NEXT rk_dex1_fs at r=7
+LOAD rk_dex1_fs_r6 0.59 0.90 1.00 waited=0min
+== rk_dex1_fs_r6 exit=0
+Replay complete: 627 successful, 93 failed, 0 skipped out of 0 total transfers
+EPR STATS successes=627 steady_goodput=5.0 whole_goodput=5.0 lat_ms_p50=3496.2 lat_ms_p90=7948.1 lat_ms_p99=9922.7 lat_ms_mean=4108.3
+GOODPUT label=rk_dex1_fs_r6 processed=719/30000 success=626 failed=93 elapsed_s=125.9 goodput_tps=5.0
+STATECHECK(label words total highbytes raw_deltas empty committed): rk_dex1_fs_r6 0 0 0 0 0 631
+2026-11-05 04:28:57.475 UTC 0030 INFO [dependencygraph] func1 -> PILOT_FABRICSHARP blocks=611 accepted=608 stale_accepted=0 early_aborted=16953 span_dropped=0 deserted=0 no_snapshot=1 exact=false
+REFINE_NEXT rk_dex1_fs at r=6
+LOAD rk_dex1_fs_r13 0.69 0.80 0.94 waited=0min
+== rk_dex1_fs_r13 exit=0
+Replay complete: 719 successful, 841 failed, 0 skipped out of 0 total transfers
+EPR STATS successes=719 steady_goodput=5.6 whole_goodput=5.6 lat_ms_p50=6345.4 lat_ms_p90=8629.4 lat_ms_p99=9207.0 lat_ms_mean=5677.4
+GOODPUT label=rk_dex1_fs_r13 processed=1551/30000 success=712 failed=839 elapsed_s=128.0 goodput_tps=5.6
+STATECHECK(label words total highbytes raw_deltas empty committed): rk_dex1_fs_r13 0 0 0 0 0 723
+2026-11-05 04:31:33.143 UTC 0032 INFO [dependencygraph] func1 -> PILOT_FABRICSHARP blocks=723 accepted=720 stale_accepted=0 early_aborted=65178 span_dropped=0 deserted=0 no_snapshot=1 exact=false
+REFINE_STOP rk_dex1_fs at r=13
+LOAD rk_dex16_fs_r137 0.71 0.76 0.90 waited=0min
+== rk_dex16_fs_r137 exit=0
+Replay complete: 16302 successful, 138 failed, 0 skipped out of 0 total transfers
+EPR STATS successes=16302 steady_goodput=135.9 whole_goodput=133.7 lat_ms_p50=311.5 lat_ms_p90=1830.1 lat_ms_p99=4332.3 lat_ms_mean=702.3
+GOODPUT label=rk_dex16_fs_r137 processed=16438/30000 success=16300 failed=138 elapsed_s=122.0 goodput_tps=133.6
+STATECHECK(label words total highbytes raw_deltas empty committed): rk_dex16_fs_r137 0 0 0 0 0 16306
+2026-11-05 04:33:55.911 UTC 0030 INFO [dependencygraph] func1 -> PILOT_FABRICSHARP blocks=1099 accepted=16220 stale_accepted=0 early_aborted=92972 span_dropped=0 deserted=0 no_snapshot=1 exact=false
+REFINE_OK rk_dex16_fs at r=137
+LOAD rk_dex16_fs_r175 3.16 1.95 1.34 waited=0min
+== rk_dex16_fs_r175 exit=0
+Replay complete: 11384 successful, 9616 failed, 0 skipped out of 0 total transfers
+EPR STATS successes=11384 steady_goodput=85.5 whole_goodput=86.6 lat_ms_p50=1043.9 lat_ms_p90=9904.3 lat_ms_p99=12725.7 lat_ms_mean=3146.5
+GOODPUT label=rk_dex16_fs_r175 processed=20883/30000 success=11304 failed=9579 elapsed_s=130.0 goodput_tps=87.0
+STATECHECK(label words total highbytes raw_deltas empty committed): rk_dex16_fs_r175 0 0 0 0 0 11388
+2026-11-05 04:36:47.072 UTC 0035 INFO [dependencygraph] func1 -> PILOT_FABRICSHARP blocks=6567 accepted=11385 stale_accepted=0 early_aborted=644114 span_dropped=427702 deserted=0 no_snapshot=1 exact=false
+REFINE_STOP rk_dex16_fs at r=175
+LOAD rk_sb0_fs_r2562 8.06 5.28 2.72 waited=0min
+== rk_sb0_fs_r2562 exit=0
+Replay complete: 40830 successful, 19170 failed, 0 skipped out of 0 total transfers
+EPR STATS successes=40830 steady_goodput=2502.3 whole_goodput=1011.6 lat_ms_p50=70.4 lat_ms_p90=171.7 lat_ms_p99=460.2 lat_ms_mean=109.1
+GOODPUT label=rk_sb0_fs_r2562 processed=54589/60000 success=40801 failed=13788 elapsed_s=40.0 goodput_tps=1020.0
+STATECHECK(label words total highbytes raw_deltas empty committed): rk_sb0_fs_r2562 0 0 0 0 0 40834
+2026-11-05 04:38:22.378 UTC 0025 INFO [dependencygraph] func1 -> PILOT_FABRICSHARP blocks=9684 accepted=40831 stale_accepted=0 early_aborted=927054 span_dropped=926941 deserted=0 no_snapshot=1 exact=false
+REFINE_STOP rk_sb0_fs at r=2562
+LOAD rk_sb0.6_fs_r2562 7.78 6.06 3.25 waited=0min
+== rk_sb0.6_fs_r2562 exit=0
+Replay complete: 57685 successful, 2315 failed, 0 skipped out of 0 total transfers
+EPR STATS successes=57685 steady_goodput=2507.4 whole_goodput=2293.1 lat_ms_p50=72.4 lat_ms_p90=150.1 lat_ms_p99=440.8 lat_ms_mean=94.5
+GOODPUT label=rk_sb0.6_fs_r2562 processed=58754/60000 success=57622 failed=1132 elapsed_s=24.0 goodput_tps=2400.8
+STATECHECK(label words total highbytes raw_deltas empty committed): rk_sb0.6_fs_r2562 0 0 0 0 0 57689
+2026-11-05 04:39:22.678 UTC 001e INFO [dependencygraph] func1 -> PILOT_FABRICSHARP blocks=839 accepted=57623 stale_accepted=0 early_aborted=25878 span_dropped=24136 deserted=0 no_snapshot=1 exact=false
+REFINE_STOP rk_sb0.6_fs at r=2562 (saturated)
+LOAD rk_sb0.8_fs_r1250 4.66 5.43 3.20 waited=0min
+== rk_sb0.8_fs_r1250 exit=0
+Replay complete: 58770 successful, 1230 failed, 0 skipped out of 0 total transfers
+EPR STATS successes=58770 steady_goodput=1221.5 whole_goodput=1098.8 lat_ms_p50=70.3 lat_ms_p90=101.8 lat_ms_p99=305.0 lat_ms_mean=85.1
+GOODPUT label=rk_sb0.8_fs_r1250 processed=59991/60000 success=58762 failed=1229 elapsed_s=52.0 goodput_tps=1130.0
+STATECHECK(label words total highbytes raw_deltas empty committed): rk_sb0.8_fs_r1250 0 0 0 0 0 58774
+2026-11-05 04:40:42.427 UTC 0023 INFO [dependencygraph] func1 -> PILOT_FABRICSHARP blocks=916 accepted=58769 stale_accepted=0 early_aborted=30386 span_dropped=0 deserted=0 no_snapshot=1 exact=false
+REFINE_STOP rk_sb0.8_fs at r=1250 (saturated)
+LOAD rk_sb1.0_fs_r625 2.73 4.63 3.09 waited=0min
+== rk_sb1.0_fs_r625 exit=0
+Replay complete: 56998 successful, 3002 failed, 0 skipped out of 0 total transfers
+EPR STATS successes=56998 steady_goodput=592.8 whole_goodput=550.6 lat_ms_p50=58.9 lat_ms_p90=111.7 lat_ms_p99=1626.4 lat_ms_mean=111.4
+GOODPUT label=rk_sb1.0_fs_r625 processed=59984/60000 success=56989 failed=2995 elapsed_s=102.0 goodput_tps=558.7
+STATECHECK(label words total highbytes raw_deltas empty committed): rk_sb1.0_fs_r625 0 0 0 0 0 57002
+2026-11-05 04:42:54.924 UTC 002e INFO [dependencygraph] func1 -> PILOT_FABRICSHARP blocks=2447 accepted=56999 stale_accepted=0 early_aborted=185256 span_dropped=0 deserted=0 no_snapshot=1 exact=false
+REFINE_STOP rk_sb1.0_fs at r=625 (saturated)
+LOAD rk_sb1.2_fs_r31 2.04 3.66 2.93 waited=0min
+== rk_sb1.2_fs_r31 exit=0
+Replay complete: 3696 successful, 24 failed, 0 skipped out of 0 total transfers
+EPR STATS successes=3696 steady_goodput=30.7 whole_goodput=29.4 lat_ms_p50=139.9 lat_ms_p90=1454.5 lat_ms_p99=6991.0 lat_ms_mean=557.5
+GOODPUT label=rk_sb1.2_fs_r31 processed=3711/60000 success=3687 failed=24 elapsed_s=124.0 goodput_tps=29.7
+STATECHECK(label words total highbytes raw_deltas empty committed): rk_sb1.2_fs_r31 0 0 0 0 0 3700
+2026-11-05 04:45:22.953 UTC 0031 INFO [dependencygraph] func1 -> PILOT_FABRICSHARP blocks=613 accepted=3680 stale_accepted=0 early_aborted=9099 span_dropped=0 deserted=0 no_snapshot=1 exact=false
+REFINE_STOP rk_sb1.2_fs at r=31 (saturated)
+LOAD rk_usdc_fs_r312 0.95 2.48 2.59 waited=0min
+== rk_usdc_fs_r312 exit=0
+Replay complete: 35889 successful, 1551 failed, 0 skipped out of 0 total transfers
+EPR STATS successes=35889 steady_goodput=297.3 whole_goodput=286.2 lat_ms_p50=116.6 lat_ms_p90=754.8 lat_ms_p99=3075.0 lat_ms_mean=317.8
+GOODPUT label=rk_usdc_fs_r312 processed=37432/151045 success=35881 failed=1551 elapsed_s=124.0 goodput_tps=289.4
+STATECHECK(label words total highbytes raw_deltas empty committed): rk_usdc_fs_r312 49363 48108003660031865732317 1 0 0 35893
+2026-11-05 04:47:57.918 UTC 0032 INFO [dependencygraph] func1 -> PILOT_FABRICSHARP blocks=2443 accepted=35890 stale_accepted=0 early_aborted=205924 span_dropped=0 deserted=0 no_snapshot=1 exact=false
+REFINE_STOP rk_usdc_fs at r=312 (saturated)
+LOAD rk_usdt_fs_r390 2.67 2.40 2.52 waited=0min
+== rk_usdt_fs_r390 exit=0
+Replay complete: 45334 successful, 1466 failed, 0 skipped out of 0 total transfers
+EPR STATS successes=45334 steady_goodput=375.5 whole_goodput=360.3 lat_ms_p50=110.5 lat_ms_p90=714.0 lat_ms_p99=3173.3 lat_ms_mean=312.3
+GOODPUT label=rk_usdt_fs_r390 processed=46799/88879 success=45333 failed=1466 elapsed_s=126.0 goodput_tps=359.8
+STATECHECK(label words total highbytes raw_deltas empty committed): rk_usdt_fs_r390 35876 29371018213451559587193 1 0 0 45338
+2026-11-05 04:50:33.053 UTC 0032 INFO [dependencygraph] func1 -> PILOT_FABRICSHARP blocks=2586 accepted=45335 stale_accepted=0 early_aborted=210510 span_dropped=0 deserted=0 no_snapshot=1 exact=false
+REFINE_STOP rk_usdt_fs at r=390 (saturated)
+LOAD rk_z0_fs_r2062 4.18 3.28 2.83 waited=0min
+== rk_z0_fs_r2062 exit=0
+Replay complete: 52604 successful, 7396 failed, 0 skipped out of 0 total transfers
+EPR STATS successes=52604 steady_goodput=1908.9 whole_goodput=1193.6 lat_ms_p50=146.1 lat_ms_p90=998.2 lat_ms_p99=15229.7 lat_ms_mean=1018.1
+GOODPUT label=rk_z0_fs_r2062 processed=59623/60000 success=52273 failed=7350 elapsed_s=44.0 goodput_tps=1188.0
+STATECHECK(label words total highbytes raw_deltas empty committed): rk_z0_fs_r2062 10001 9973000029957321861212 1 0 0 52608
+2026-11-05 04:51:53.810 UTC 0023 INFO [dependencygraph] func1 -> PILOT_FABRICSHARP blocks=5783 accepted=52605 stale_accepted=0 early_aborted=525246 span_dropped=518357 deserted=0 no_snapshot=1 exact=false
+REFINE_STOP rk_z0_fs at r=2062
+LOAD rk_z0.6_fs_r1062 0.38 2.54 2.94 waited=5min
+== rk_z0.6_fs_r1062 exit=0
+Replay complete: 59732 successful, 268 failed, 0 skipped out of 0 total transfers
+EPR STATS successes=59732 steady_goodput=1056.1 whole_goodput=965.5 lat_ms_p50=81.5 lat_ms_p90=134.5 lat_ms_p99=865.0 lat_ms_mean=110.0
+GOODPUT label=rk_z0.6_fs_r1062 processed=59989/60000 success=59722 failed=267 elapsed_s=60.0 goodput_tps=995.3
+STATECHECK(label words total highbytes raw_deltas empty committed): rk_z0.6_fs_r1062 9983 9692000029953895126708 1 0 0 59736
+2026-11-05 04:58:22.839 UTC 0024 INFO [dependencygraph] func1 -> PILOT_FABRICSHARP blocks=1024 accepted=59717 stale_accepted=0 early_aborted=41454 span_dropped=0 deserted=0 no_snapshot=1 exact=false
+REFINE_STOP rk_z0.6_fs at r=1062 (saturated)
+LOAD pk_dex16_depg_r62 2.08 2.56 2.91 waited=0min
+== pk_dex16_depg_r62 exit=0
+Replay complete: 7440 successful, 0 failed, 0 skipped out of 0 total transfers
+EPR STATS successes=7440 steady_goodput=62.1 whole_goodput=60.8 lat_ms_p50=351.0 lat_ms_p90=1107.0 lat_ms_p99=2303.3 lat_ms_mean=505.8
+GOODPUT label=pk_dex16_depg_r62 processed=7437/30000 success=7437 failed=0 elapsed_s=122.0 goodput_tps=61.0
+STATECHECK(label words total highbytes raw_deltas empty committed): pk_dex16_depg_r62 0 0 0 0 0 7444
+REFINE_OK pk_dex16_depg at r=62
+LOAD pk_dex16_depg_r75 0.67 1.77 2.56 waited=0min
+== pk_dex16_depg_r75 exit=0
+Replay complete: 9000 successful, 0 failed, 0 skipped out of 0 total transfers
+EPR STATS successes=9000 steady_goodput=67.7 whole_goodput=65.8 lat_ms_p50=5983.7 lat_ms_p90=12187.5 lat_ms_p99=15324.6 lat_ms_mean=6530.1
+GOODPUT label=pk_dex16_depg_r75 processed=8996/30000 success=8996 failed=0 elapsed_s=136.0 goodput_tps=66.2
+STATECHECK(label words total highbytes raw_deltas empty committed): pk_dex16_depg_r75 0 0 0 0 0 9004
+REFINE_STOP pk_dex16_depg at r=75
+LOAD pk_sb0_depg_r22750 0.52 1.27 2.24 waited=0min
+== pk_sb0_depg_r22750 exit=0
+Replay complete: 58866 successful, 1134 failed, 0 skipped out of 0 total transfers
+EPR STATS successes=58866 steady_goodput=22428.6 whole_goodput=18214.0 lat_ms_p50=39.3 lat_ms_p90=76.8 lat_ms_p99=133.6 lat_ms_mean=47.7
+GOODPUT label=pk_sb0_depg_r22750 processed=44359/60000 success=43700 failed=659 elapsed_s=2.0 goodput_tps=21838.2
+STATECHECK(label words total highbytes raw_deltas empty committed): pk_sb0_depg_r22750 0 0 0 0 0 58870
+REFINE_NEXT pk_sb0_depg at r=22750
+LOAD pk_sb0_depg_r22500 0.56 1.21 2.19 waited=0min
+== pk_sb0_depg_r22500 exit=0
+Replay complete: 58866 successful, 1134 failed, 0 skipped out of 0 total transfers
+EPR STATS successes=58866 steady_goodput=22221.2 whole_goodput=18088.6 lat_ms_p50=35.7 lat_ms_p90=64.0 lat_ms_p99=108.0 lat_ms_mean=41.6
+GOODPUT label=pk_sb0_depg_r22500 processed=44138/60000 success=43500 failed=638 elapsed_s=2.0 goodput_tps=21737.6
+STATECHECK(label words total highbytes raw_deltas empty committed): pk_sb0_depg_r22500 0 0 0 0 0 58870
+REFINE_NEXT pk_sb0_depg at r=22500
+LOAD pk_sb0_depg_r22250 6.82 2.45 2.57 waited=0min
+== pk_sb0_depg_r22250 exit=0
+Replay complete: 58866 successful, 1134 failed, 0 skipped out of 0 total transfers
+EPR STATS successes=58866 steady_goodput=21838.5 whole_goodput=17924.2 lat_ms_p50=36.5 lat_ms_p90=67.1 lat_ms_p99=113.4 lat_ms_mean=43.2
+GOODPUT label=pk_sb0_depg_r22250 processed=43615/60000 success=43000 failed=615 elapsed_s=2.0 goodput_tps=21483.0
+STATECHECK(label words total highbytes raw_deltas empty committed): pk_sb0_depg_r22250 0 0 0 0 0 58870
+REFINE_NEXT pk_sb0_depg at r=22250
+LOAD pk_sb0.8_depg_r212 6.76 2.76 2.66 waited=0min
+== pk_sb0.8_depg_r212 exit=0
+Replay complete: 25241 successful, 199 failed, 0 skipped out of 0 total transfers
+EPR STATS successes=25241 steady_goodput=209.7 whole_goodput=204.2 lat_ms_p50=125.3 lat_ms_p90=209.9 lat_ms_p99=2635.5 lat_ms_mean=189.6
+GOODPUT label=pk_sb0.8_depg_r212 processed=25417/60000 success=25218 failed=199 elapsed_s=122.0 goodput_tps=206.7
+STATECHECK(label words total highbytes raw_deltas empty committed): pk_sb0.8_depg_r212 0 0 0 0 0 25245
+REFINE_OK pk_sb0.8_depg at r=212
+LOAD pk_sb0.8_depg_r312 0.84 1.81 2.31 waited=0min
+== pk_sb0.8_depg_r312 exit=0
+Replay complete: 37007 successful, 433 failed, 0 skipped out of 0 total transfers
+EPR STATS successes=37007 steady_goodput=247.5 whole_goodput=210.4 lat_ms_p50=199.3 lat_ms_p90=31610.6 lat_ms_p99=49190.0 lat_ms_mean=8716.2
+GOODPUT label=pk_sb0.8_depg_r312 processed=37439/60000 success=37006 failed=433 elapsed_s=176.0 goodput_tps=210.3
+STATECHECK(label words total highbytes raw_deltas empty committed): pk_sb0.8_depg_r312 0 0 0 0 0 37011
+REFINE_STOP pk_sb0.8_depg at r=312 (saturated)
+LOAD pk_sb1.0_depg_r62 0.60 1.22 1.98 waited=0min
+== pk_sb1.0_depg_r62 exit=0
+Replay complete: 7426 successful, 14 failed, 0 skipped out of 0 total transfers
+EPR STATS successes=7426 steady_goodput=60.8 whole_goodput=55.3 lat_ms_p50=144.9 lat_ms_p90=4397.0 lat_ms_p99=11636.2 lat_ms_mean=1184.3
+GOODPUT label=pk_sb1.0_depg_r62 processed=7438/60000 success=7424 failed=14 elapsed_s=134.0 goodput_tps=55.4
+STATECHECK(label words total highbytes raw_deltas empty committed): pk_sb1.0_depg_r62 0 0 0 0 0 7430
+REFINE_STOP pk_sb1.0_depg at r=62 (saturated)
+LOAD pk_usdc_depg_r43 0.43 0.94 1.76 waited=0min
+== pk_usdc_depg_r43 exit=0
+Replay complete: 5160 successful, 0 failed, 0 skipped out of 0 total transfers
+EPR STATS successes=5160 steady_goodput=43.0 whole_goodput=42.9 lat_ms_p50=196.3 lat_ms_p90=3099.3 lat_ms_p99=9461.8 lat_ms_mean=969.1
+GOODPUT label=pk_usdc_depg_r43 processed=5155/151045 success=5155 failed=0 elapsed_s=120.0 goodput_tps=43.0
+STATECHECK(label words total highbytes raw_deltas empty committed): pk_usdc_depg_r43 48310 48108003660031865732317 1 0 0 5164
+REFINE_OK pk_usdc_depg at r=43
+LOAD pk_usdc_depg_r62 0.36 0.71 1.54 waited=0min
+== pk_usdc_depg_r62 exit=0
+Replay complete: 7440 successful, 0 failed, 0 skipped out of 0 total transfers
+EPR STATS successes=7440 steady_goodput=53.7 whole_goodput=48.8 lat_ms_p50=1711.4 lat_ms_p90=24539.6 lat_ms_p99=32973.0 lat_ms_mean=8545.2
+GOODPUT label=pk_usdc_depg_r62 processed=7428/151045 success=7428 failed=0 elapsed_s=152.0 goodput_tps=48.9
+STATECHECK(label words total highbytes raw_deltas empty committed): pk_usdc_depg_r62 48380 48108003660031865732317 1 0 0 7444
+REFINE_STOP pk_usdc_depg at r=62 (saturated)
+LOAD pk_usdt_depg_r87 0.47 0.61 1.36 waited=0min
+== pk_usdt_depg_r87 exit=0
+Replay complete: 10440 successful, 0 failed, 0 skipped out of 0 total transfers
+EPR STATS successes=10440 steady_goodput=83.4 whole_goodput=76.3 lat_ms_p50=338.9 lat_ms_p90=12520.5 lat_ms_p99=19502.1 lat_ms_mean=3059.1
+GOODPUT label=pk_usdt_depg_r87 processed=10430/88879 success=10430 failed=0 elapsed_s=136.0 goodput_tps=76.7
+STATECHECK(label words total highbytes raw_deltas empty committed): pk_usdt_depg_r87 30984 29371018213451559587193 1 0 0 10444
+REFINE_NEXT pk_usdt_depg at r=87
+LOAD pk_usdt_depg_r75 0.44 0.58 1.22 waited=0min
+== pk_usdt_depg_r75 exit=0
+Replay complete: 9000 successful, 0 failed, 0 skipped out of 0 total transfers
+EPR STATS successes=9000 steady_goodput=73.7 whole_goodput=71.7 lat_ms_p50=259.7 lat_ms_p90=4388.8 lat_ms_p99=9194.3 lat_ms_mean=1326.7
+GOODPUT label=pk_usdt_depg_r75 processed=8968/88879 success=8968 failed=0 elapsed_s=124.0 goodput_tps=72.3
+STATECHECK(label words total highbytes raw_deltas empty committed): pk_usdt_depg_r75 30765 29371018213451559587193 1 0 0 9004
+REFINE_NEXT pk_usdt_depg at r=75
+LOAD pk_usdt_depg_r62 0.54 0.65 1.16 waited=0min
+== pk_usdt_depg_r62 exit=0
+Replay complete: 7440 successful, 0 failed, 0 skipped out of 0 total transfers
+EPR STATS successes=7440 steady_goodput=61.2 whole_goodput=60.6 lat_ms_p50=208.9 lat_ms_p90=2588.4 lat_ms_p99=6825.4 lat_ms_mean=867.6
+GOODPUT label=pk_usdt_depg_r62 processed=7424/88879 success=7424 failed=0 elapsed_s=122.0 goodput_tps=60.9
+STATECHECK(label words total highbytes raw_deltas empty committed): pk_usdt_depg_r62 30572 29371018213451559587193 1 0 0 7444
+REFINE_OK pk_usdt_depg at r=62
+LOAD pk_usdt_depg_r112 0.48 0.56 1.05 waited=0min
+== pk_usdt_depg_r112 exit=0
+Replay complete: 13440 successful, 0 failed, 0 skipped out of 0 total transfers
+EPR STATS successes=13440 steady_goodput=94.7 whole_goodput=79.0 lat_ms_p50=590.5 lat_ms_p90=35755.5 lat_ms_p99=50736.7 lat_ms_mean=9057.4
+GOODPUT label=pk_usdt_depg_r112 processed=13430/88879 success=13430 failed=0 elapsed_s=170.0 goodput_tps=79.0
+STATECHECK(label words total highbytes raw_deltas empty committed): pk_usdt_depg_r112 31447 29371018213451559587193 1 0 0 13444
+REFINE_STOP pk_usdt_depg at r=112 (saturated)
+LOAD pk_z0_depg_r22750 0.42 0.52 0.94 waited=0min
+== pk_z0_depg_r22750 exit=0
+Replay complete: 60000 successful, 0 failed, 0 skipped out of 0 total transfers
+EPR STATS successes=60000 steady_goodput=17490.1 whole_goodput=14892.6 lat_ms_p50=493.4 lat_ms_p90=807.1 lat_ms_p99=875.7 lat_ms_mean=486.5
+GOODPUT label=pk_z0_depg_r22750 processed=59998/60000 success=59998 failed=0 elapsed_s=4.0 goodput_tps=14993.9
+STATECHECK(label words total highbytes raw_deltas empty committed): pk_z0_depg_r22750 10001 9973000029957321861212 1 0 0 60004
+REFINE_NEXT pk_z0_depg at r=22750
+LOAD pk_z0_depg_r22500 0.27 0.47 0.91 waited=0min
+== pk_z0_depg_r22500 exit=0
+Replay complete: 60000 successful, 0 failed, 0 skipped out of 0 total transfers
+EPR STATS successes=60000 steady_goodput=17475.5 whole_goodput=14236.4 lat_ms_p50=459.7 lat_ms_p90=773.5 lat_ms_p99=845.2 lat_ms_mean=460.0
+GOODPUT label=pk_z0_depg_r22500 processed=59995/60000 success=59995 failed=0 elapsed_s=4.0 goodput_tps=14991.5
+STATECHECK(label words total highbytes raw_deltas empty committed): pk_z0_depg_r22500 10001 9973000029957321861212 1 0 0 60004
+REFINE_NEXT pk_z0_depg at r=22500
+LOAD pk_z0_depg_r22250 6.64 1.78 1.32 waited=0min
+== pk_z0_depg_r22250 exit=0
+Replay complete: 60000 successful, 0 failed, 0 skipped out of 0 total transfers
+EPR STATS successes=60000 steady_goodput=17647.7 whole_goodput=14943.4 lat_ms_p50=452.8 lat_ms_p90=752.9 lat_ms_p99=826.1 lat_ms_mean=452.1
+GOODPUT label=pk_z0_depg_r22250 processed=59998/60000 success=59998 failed=0 elapsed_s=4.0 goodput_tps=14992.7
+STATECHECK(label words total highbytes raw_deltas empty committed): pk_z0_depg_r22250 10001 9973000029957321861212 1 0 0 60004
+REFINE_NEXT pk_z0_depg at r=22250
+LOAD pk_z0.8_depg_r62 8.20 2.43 1.54 waited=0min
+== pk_z0.8_depg_r62 exit=0
+Replay complete: 7440 successful, 0 failed, 0 skipped out of 0 total transfers
+EPR STATS successes=7440 steady_goodput=62.1 whole_goodput=61.8 lat_ms_p50=130.0 lat_ms_p90=358.5 lat_ms_p99=1801.6 lat_ms_mean=215.5
+GOODPUT label=pk_z0.8_depg_r62 processed=7423/60000 success=7423 failed=0 elapsed_s=120.0 goodput_tps=61.9
+STATECHECK(label words total highbytes raw_deltas empty committed): pk_z0.8_depg_r62 9246 9037000029928052010165 1 0 0 7444
+REFINE_OK pk_z0.8_depg at r=62
+LOAD pk_z0.8_depg_r75 1.41 1.85 1.46 waited=0min
+== pk_z0.8_depg_r75 exit=0
+Replay complete: 9000 successful, 0 failed, 0 skipped out of 0 total transfers
+EPR STATS successes=9000 steady_goodput=73.0 whole_goodput=68.2 lat_ms_p50=161.2 lat_ms_p90=6846.3 lat_ms_p99=10701.7 lat_ms_mean=1704.8
+GOODPUT label=pk_z0.8_depg_r75 processed=8999/60000 success=8999 failed=0 elapsed_s=132.0 goodput_tps=68.2
+STATECHECK(label words total highbytes raw_deltas empty committed): pk_z0.8_depg_r75 9280 9037000029928052010165 1 0 0 9004
+REFINE_STOP pk_z0.8_depg at r=75 (saturated)
+S15A refinements done
+STAGE_DONE s15a 2026-11-05 05:35:24

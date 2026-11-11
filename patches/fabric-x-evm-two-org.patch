@@ -1,0 +1,224 @@
+diff --git a/gateway/core/batch_submitter.go b/gateway/core/batch_submitter.go
+index 8ece845..a476780 100644
+--- a/gateway/core/batch_submitter.go
++++ b/gateway/core/batch_submitter.go
+@@ -149,6 +149,10 @@ func (bs *BatchSubmitter) run(ctx context.Context) {
+ // (e.g. no endorsement because execution reverted).
+ var SubmitFailedHook func(hash common.Hash)
+ 
++// SubmitFailedErrHook, if set, is called instead of SubmitFailedHook with the hash and the submission error
++// (two-organization runs: the harness retries endorsements that disagree).
++var SubmitFailedErrHook func(hash common.Hash, err error)
++
+ func (bs *BatchSubmitter) worker(ctx context.Context, workerID int, wg *sync.WaitGroup) {
+ 	defer wg.Done()
+ 
+@@ -171,7 +175,9 @@ func (bs *BatchSubmitter) worker(ctx context.Context, workerID int, wg *sync.Wai
+ 			}
+ 			if err := bs.submitOne(ctx, workerID, end); err != nil {
+ 				batchLogger.Errorf("Worker %d: submit failed: %v", workerID, err)
+-				if SubmitFailedHook != nil {
++				if SubmitFailedErrHook != nil {
++					SubmitFailedErrHook(end.Hash, err)
++				} else if SubmitFailedHook != nil {
+ 					SubmitFailedHook(end.Hash)
+ 				}
+ 				if bs.completer != nil {
+diff --git a/integration/perf/d16_twoorg_check_test.go b/integration/perf/d16_twoorg_check_test.go
+new file mode 100644
+index 0000000..e27236b
+--- /dev/null
++++ b/integration/perf/d16_twoorg_check_test.go
+@@ -0,0 +1,36 @@
++package main
++
++import (
++	"os"
++	"testing"
++
++	fc "github.com/hyperledger/fabric-x-evm/common"
++	"github.com/hyperledger/fabric-x-evm/endorser/execution"
++	"github.com/hyperledger/fabric-x-evm/endorser/testimpl"
++	gwconfig "github.com/hyperledger/fabric-x-evm/gateway/config"
++)
++
++// TestD16TwoOrgEndorserBuild (two-organization runs) checks without a network that the org2 endorser of
++// fabx-2of2-org2.yaml builds through the perf harness's endorser factory (Org2MSP identity, one-block KVS
++// history), exactly as -extra-endorsers builds it.
++func TestD16TwoOrgEndorserBuild(t *testing.T) {
++	cwd, _ := os.Getwd()
++	defer os.Chdir(cwd)
++	_ = os.Chdir("../")
++	cfg, err := gwconfig.Load("fabx-2of2-org2.yaml")
++	if err != nil {
++		t.Fatal(err)
++	}
++	if cfg.Endorser == nil {
++		t.Fatal("no endorser section")
++	}
++	ecfg := *cfg.Endorser
++	ecfg.Database.HistorySize = 1
++	evmConfig := execution.EVMConfig{ChainConfig: fc.BuildChainConfig(cfg.Network.ChainID)}
++	factory := balancePrimingEndorserFactory(&testimpl.BalancePrimingConfig{Enabled: false})
++	comp := factory(t, ecfg, cfg.Network.Channel, "basic2of2", evmConfig, cfg.Network.Protocol)
++	if comp.KVS == nil || comp.Builder == nil || comp.Service == nil {
++		t.Fatal("incomplete endorser components")
++	}
++	t.Logf("D16 TWOORG CHECK ok: endorser %s", ecfg.Name)
++}
+diff --git a/integration/perf/replay_json_dataset_test.go b/integration/perf/replay_json_dataset_test.go
+index 9b27dc6..96b1a27 100644
+--- a/integration/perf/replay_json_dataset_test.go
++++ b/integration/perf/replay_json_dataset_test.go
+@@ -244,6 +244,37 @@ var workers = flag.Int("workers", 20, "number of gateway workers processing tran
+ var submitters = flag.Int("submitters", 4, "number of goroutines submitting transactions to the gateway")
+ var orderers = flag.Int("orderers", 8, "number of goroutines submitting transactions to the orderer (BatchSubmitter workers)")
+ var outstanding = flag.Int("outstanding", 1000, "maximum number of outstanding transactions")
++var retryMismatch = flag.Bool("retry-mismatch", false, "D16 two-organization runs: resubmit transactions whose endorsements disagree, like MVCC conflicts")
++
++// eprMismatchRetries counts the endorsement disagreements resubmitted (-retry-mismatch).
++var eprMismatchRetries atomic.Int64
++
++// hasSub reports whether s contains sub.
++func hasSub(s, sub string) bool {
++	for i := 0; i+len(sub) <= len(s); i++ {
++		if s[i:i+len(sub)] == sub {
++			return true
++		}
++	}
++	return false
++}
++
++var extraEndorsers = flag.String("extra-endorsers", "", "comma-separated endorser config files of further organizations, relative to integration/ (D16 two-organization runs), e.g. fabx-2of2-org2.yaml")
++
++// splitList splits a comma-separated flag value, dropping empty items.
++func splitList(v string) []string {
++	var out []string
++	start := 0
++	for i := 0; i <= len(v); i++ {
++		if i == len(v) || v[i] == ',' {
++			if p := v[start:i]; p != "" {
++				out = append(out, p)
++			}
++			start = i + 1
++		}
++	}
++	return out
++}
+ 
+ // txCompletion carries the fields needed by the refill loop after a transaction commits.
+ type txCompletion struct {
+@@ -497,6 +528,19 @@ func runReplayTest(t *testing.T, processingWorkerCount int, submittingWorkerCoun
+ 	tracker := NewTxCompletionTracker(completionCh)
+ 	gwcore.SubmitFailedHook = func(h common.Hash) { _ = tracker.Observe(h, blocks.StatusEndorsementPolicyFailure) }
+ 	defer func() { gwcore.SubmitFailedHook = nil }()
++	if *retryMismatch {
++		// two-organization runs: endorsements that disagree (endorsers at different block heights) are
++		// resubmitted like MVCC conflicts; other submission failures (e.g. reverts) stay failures.
++		gwcore.SubmitFailedErrHook = func(h common.Hash, err error) {
++			st := blocks.StatusEndorsementPolicyFailure
++			if err != nil && hasSub(err.Error(), "do not match") {
++				st = blocks.StatusMVCCConflict
++				eprMismatchRetries.Add(1)
++			}
++			_ = tracker.Observe(h, st)
++		}
++		defer func() { gwcore.SubmitFailedErrHook = nil }()
++	}
+ 
+ 	// Choose test harness based on backend:
+ 	// - Local: Traditional block-based synchronization
+@@ -519,7 +563,7 @@ func runReplayTest(t *testing.T, processingWorkerCount int, submittingWorkerCoun
+ 	}
+ 	fmt.Printf("using queue type %T\n", queue)
+ 	fmt.Printf("using namespace %s", *namespace)
+-	th, err := integration.NewFabricXTestHarnessWithNotifications(
++	th, err := integration.NewFabricXTestHarnessWithNotificationsExtra(
+ 		t,
+ 		integration.TestLogger{T: t},
+ 		evmConfig,
+@@ -540,7 +584,8 @@ func runReplayTest(t *testing.T, processingWorkerCount int, submittingWorkerCoun
+ 		factory,
+ 		queue,
+ 		perfHandlerChain(tracker),
+-		gwConfig)
++		gwConfig,
++		splitList(*extraEndorsers))
+ 	// th, err = integration.NewFabricTestHarnessWithFactoryAndTxQueue(t, integration.TestLogger{T: t}, evmConfig, "testdata/USDC_contract.json", map[string]any{"Gateway.WorkerCount": processingWorkerCount, "Gateway.SubmitterCount": ordererSubmitterCount, "Network.Namespace": *namespace}, factory, gwcore.NewTxQueueV2())
+ 	assert.NoError(t, err)
+ 
+@@ -1209,6 +1254,9 @@ func eprRecordSuccess(t4, t1 time.Time, haveT1 bool) {
+ var eprRetries atomic.Int64
+ 
+ func eprReport(t *testing.T) {
++	if r := eprMismatchRetries.Load(); r > 0 {
++		t.Logf("EPR MISMATCH RETRY resubmissions=%d", r)
++	}
+ 	if r := eprRetries.Load(); r > 0 {
+ 		t.Logf("EPR RETRY resubmissions=%d", r)
+ 	}
+diff --git a/integration/test_helpers.go b/integration/test_helpers.go
+index 160a818..a638a35 100644
+--- a/integration/test_helpers.go
++++ b/integration/test_helpers.go
+@@ -593,6 +593,60 @@ func NewFabricXTestHarnessWithNotifications(t *testing.T, logger sdk.Logger, evm
+ 	return th, nil
+ }
+ 
++// NewFabricXTestHarnessWithNotificationsExtra (two-organization runs) is
++// NewFabricXTestHarnessWithNotifications plus the endorsers of further organizations: each is
++// built by factory from the endorser section of its own config file (paths relative to
++// integration/, e.g. fabx-2of2-org2.yaml), runs in this process with its own KVS, is
++// registered as a block handler like the local endorser (so it syncs every block), and is
++// called by the gateway after the local endorser; the state primer signs with all of them.
++func NewFabricXTestHarnessWithNotificationsExtra(t *testing.T, logger sdk.Logger, evmConfig execution.EVMConfig, primeDbPath string, configOverrides map[string]any, factory EndorserFactory, txQueue core.TxQueueInterface, chainFactory HandlerChainFactory, confFile string, extraEndorserFiles []string) (*TestHarness, error) {
++	if len(extraEndorserFiles) == 0 {
++		return NewFabricXTestHarnessWithNotifications(t, logger, evmConfig, primeDbPath, configOverrides, factory, txQueue, chainFactory, confFile)
++	}
++	if primeDbPath != "" && !filepath.IsAbs(primeDbPath) {
++		if abs, err := filepath.Abs(primeDbPath); err == nil {
++			primeDbPath = abs
++		}
++	}
++	cwd, _ := os.Getwd()
++	defer os.Chdir(cwd)
++	_ = os.Chdir("../")
++
++	cfg, err := config.Load(confFile)
++	if err != nil {
++		return nil, fmt.Errorf("load config: %w", err)
++	}
++
++	endorsers, err := prepareHarnessConfig(t, &cfg, &evmConfig, configOverrides, factory)
++	if err != nil {
++		return nil, err
++	}
++	for _, f := range extraEndorserFiles {
++		ecfgFile, err := config.Load(f)
++		if err != nil {
++			return nil, fmt.Errorf("load %s: %w", f, err)
++		}
++		if ecfgFile.Endorser == nil {
++			return nil, fmt.Errorf("%s: no endorser section", f)
++		}
++		ecfg := *ecfgFile.Endorser
++		ecfg.Database.HistorySize = 1
++		endorsers = append(endorsers, factory(t, ecfg, cfg.Network.Channel, cfg.Network.Namespace, evmConfig, cfg.Network.Protocol))
++		fmt.Printf("D16 EXTRA ENDORSER %s (%s) for namespace %s\n", ecfg.Name, f, cfg.Network.Namespace)
++	}
++
++	th, sync, err := buildTestHarness(t, logger, cfg, evmConfig, primeDbPath, false, endorsers, txQueue, chainFactory)
++	if err != nil {
++		return nil, err
++	}
++
++	if err := synchronizer.WaitUntilSynced(t.Context(), sync, 60*time.Second); err != nil {
++		return nil, fmt.Errorf("timed out waiting for sync: %w", err)
++	}
++
++	return th, nil
++}
++
+ // fabricXSignerWrapper wraps a fabric-x-common signer so that Serialize returns only
+ // the ID (hash) of the signing cert instead of the full cert.
+ //

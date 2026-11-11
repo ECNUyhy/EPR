@@ -1,0 +1,4 @@
+STACK orderer_containers=16 committer_containers=6
+== mn44_sb_fpp_rtt20_r200 exit=124
+GOODPUT label=mn44_sb_fpp_rtt20_r200 processed=5505/60000 success=5487 failed=18 elapsed_s=60.0 goodput_tps=91.5
+STATE str_keys=200000 statuses=1:5490,3:11136

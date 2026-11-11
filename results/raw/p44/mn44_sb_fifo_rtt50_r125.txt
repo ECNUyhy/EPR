@@ -1,0 +1,5 @@
+STACK orderer_containers=16 committer_containers=6
+== mn44_sb_fifo_rtt50_r125 exit=0
+EPR STATS successes=7041 steady_goodput=115.3 whole_goodput=97.1 lat_ms_p50=305.5 lat_ms_p90=1210.4 lat_ms_p99=12976.4 lat_ms_mean=891.9
+GOODPUT label=mn44_sb_fifo_rtt50_r125 processed=7491/60000 success=7036 failed=455 elapsed_s=72.0 goodput_tps=97.7
+STATE str_keys=200000 statuses=1:7044,3:36469

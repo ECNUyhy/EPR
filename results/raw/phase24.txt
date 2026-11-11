@@ -1,0 +1,110 @@
+TODO 13: sb1.0 fifo sb1.0 ng sb1.2 ro sb1.2 fifo sb1.2 rxo sb1.2 ng sb0.8 fifo sb0.8 ng usdc fifo z0.99 ro z0.99 fifo z0.99 rxo z0.8 fifo
+== lk_sb1.0_fifo_r100 exit=0
+Replay complete: 11648 successful, 352 failed, 0 skipped out of 0 total transfers
+EPR STATS successes=11648 steady_goodput=96.7 whole_goodput=93.0 lat_ms_p50=208.4 lat_ms_p90=448.4 lat_ms_p99=6974.5 lat_ms_mean=429.3
+GOODPUT label=lk_sb1.0_fifo_r100 processed=11990/60000 success=11640 failed=350 elapsed_s=124.0 goodput_tps=93.9
+== lk_sb1.0_fifo_r250 exit=124
+GOODPUT label=lk_sb1.0_fifo_r250 processed=21897/60000 success=21358 failed=539 elapsed_s=284.0 goodput_tps=75.2
+COLLAPSE lk_sb1.0_fifo at r=250
+== lk_sb1.0_ng_r100 exit=0
+Replay complete: 11968 successful, 32 failed, 0 skipped out of 0 total transfers
+EPR STATS successes=11968 steady_goodput=99.7 whole_goodput=99.4 lat_ms_p50=119.8 lat_ms_p90=203.5 lat_ms_p99=487.2 lat_ms_mean=128.5
+GOODPUT label=lk_sb1.0_ng_r100 processed=11977/60000 success=11945 failed=32 elapsed_s=120.0 goodput_tps=99.5
+== lk_sb1.0_ng_r250 exit=0
+Replay complete: 29165 successful, 835 failed, 0 skipped out of 0 total transfers
+EPR STATS successes=29165 steady_goodput=242.6 whole_goodput=232.3 lat_ms_p50=178.5 lat_ms_p90=260.2 lat_ms_p99=2549.0 lat_ms_mean=247.9
+GOODPUT label=lk_sb1.0_ng_r250 processed=29987/60000 success=29152 failed=835 elapsed_s=124.0 goodput_tps=235.1
+== lk_sb1.0_ng_r500 exit=1
+GOODPUT label=lk_sb1.0_ng_r500 processed=51587/60000 success=50651 failed=936 elapsed_s=194.0 goodput_tps=261.1
+COLLAPSE lk_sb1.0_ng at r=500
+== lk_sb1.2_ro_r100 exit=0
+Replay complete: 10581 successful, 1419 failed, 0 skipped out of 0 total transfers
+EPR STATS successes=10581 steady_goodput=87.9 whole_goodput=82.4 lat_ms_p50=115.2 lat_ms_p90=473.2 lat_ms_p99=4945.4 lat_ms_mean=366.5
+GOODPUT label=lk_sb1.2_ro_r100 processed=11998/60000 success=10579 failed=1419 elapsed_s=128.0 goodput_tps=82.6
+== lk_sb1.2_ro_r250 exit=1
+GOODPUT label=lk_sb1.2_ro_r250 processed=16844/60000 success=14470 failed=2374 elapsed_s=68.0 goodput_tps=212.8
+COLLAPSE lk_sb1.2_ro at r=250
+== lk_sb1.2_fifo_r100 exit=124
+GOODPUT label=lk_sb1.2_fifo_r100 processed=7858/60000 success=7247 failed=611 elapsed_s=264.0 goodput_tps=27.4
+COLLAPSE lk_sb1.2_fifo at r=100
+== lk_sb1.2_rxo_r100 exit=0
+Replay complete: 11982 successful, 18 failed, 0 skipped out of 0 total transfers
+EPR STATS successes=11982 steady_goodput=100.0 whole_goodput=99.7 lat_ms_p50=128.0 lat_ms_p90=211.6 lat_ms_p99=496.8 lat_ms_mean=136.1
+GOODPUT label=lk_sb1.2_rxo_r100 processed=11985/60000 success=11967 failed=18 elapsed_s=120.0 goodput_tps=99.7
+== lk_sb1.2_rxo_r250 exit=0
+Replay complete: 29914 successful, 86 failed, 0 skipped out of 0 total transfers
+EPR STATS successes=29914 steady_goodput=249.3 whole_goodput=249.2 lat_ms_p50=156.9 lat_ms_p90=243.7 lat_ms_p99=2710.2 lat_ms_mean=228.0
+GOODPUT label=lk_sb1.2_rxo_r250 processed=29945/60000 success=29859 failed=86 elapsed_s=120.0 goodput_tps=248.8
+== lk_sb1.2_rxo_r500 exit=1
+GOODPUT label=lk_sb1.2_rxo_r500 processed=45913/60000 success=45117 failed=796 elapsed_s=92.0 goodput_tps=490.4
+COLLAPSE lk_sb1.2_rxo at r=500
+== lk_sb1.2_ng_r100 exit=0
+Replay complete: 11242 successful, 758 failed, 0 skipped out of 0 total transfers
+EPR STATS successes=11242 steady_goodput=93.0 whole_goodput=89.2 lat_ms_p50=223.9 lat_ms_p90=424.6 lat_ms_p99=5957.6 lat_ms_mean=394.9
+GOODPUT label=lk_sb1.2_ng_r100 processed=11999/60000 success=11241 failed=758 elapsed_s=126.0 goodput_tps=89.2
+== lk_sb1.2_ng_r250 exit=1
+GOODPUT label=lk_sb1.2_ng_r250 processed=20508/60000 success=20190 failed=318 elapsed_s=132.0 goodput_tps=153.0
+COLLAPSE lk_sb1.2_ng at r=250
+== lk_sb0.8_fifo_r100 exit=0
+Replay complete: 11965 successful, 35 failed, 0 skipped out of 0 total transfers
+EPR STATS successes=11965 steady_goodput=99.7 whole_goodput=99.7 lat_ms_p50=111.3 lat_ms_p90=192.1 lat_ms_p99=237.9 lat_ms_mean=112.2
+GOODPUT label=lk_sb0.8_fifo_r100 processed=11994/60000 success=11959 failed=35 elapsed_s=120.0 goodput_tps=99.7
+== lk_sb0.8_fifo_r250 exit=0
+Replay complete: 29726 successful, 274 failed, 0 skipped out of 0 total transfers
+EPR STATS successes=29726 steady_goodput=247.4 whole_goodput=239.7 lat_ms_p50=137.6 lat_ms_p90=223.3 lat_ms_p99=1438.5 lat_ms_mean=178.3
+GOODPUT label=lk_sb0.8_fifo_r250 processed=29998/60000 success=29724 failed=274 elapsed_s=124.0 goodput_tps=239.7
+== lk_sb0.8_fifo_r500 exit=0
+Replay complete: 58797 successful, 1203 failed, 0 skipped out of 0 total transfers
+EPR STATS successes=58797 steady_goodput=490.0 whole_goodput=468.5 lat_ms_p50=138.8 lat_ms_p90=196.4 lat_ms_p99=1242.9 lat_ms_mean=178.8
+GOODPUT label=lk_sb0.8_fifo_r500 processed=59987/60000 success=58785 failed=1202 elapsed_s=124.0 goodput_tps=474.1
+== lk_sb0.8_fifo_r750 exit=1
+GOODPUT label=lk_sb0.8_fifo_r750 processed=58402/60000 success=57222 failed=1180 elapsed_s=78.0 goodput_tps=733.6
+COLLAPSE lk_sb0.8_fifo at r=750
+== lk_sb0.8_ng_r100 exit=0
+Replay complete: 11965 successful, 35 failed, 0 skipped out of 0 total transfers
+EPR STATS successes=11965 steady_goodput=99.7 whole_goodput=99.7 lat_ms_p50=110.6 lat_ms_p90=191.2 lat_ms_p99=209.6 lat_ms_mean=110.9
+GOODPUT label=lk_sb0.8_ng_r100 processed=11981/60000 success=11946 failed=35 elapsed_s=120.0 goodput_tps=99.5
+== lk_sb0.8_ng_r250 exit=0
+Replay complete: 29736 successful, 264 failed, 0 skipped out of 0 total transfers
+EPR STATS successes=29736 steady_goodput=248.1 whole_goodput=247.8 lat_ms_p50=117.0 lat_ms_p90=198.4 lat_ms_p99=296.5 lat_ms_mean=119.2
+GOODPUT label=lk_sb0.8_ng_r250 processed=29958/60000 success=29694 failed=264 elapsed_s=120.0 goodput_tps=247.4
+== lk_sb0.8_ng_r500 exit=0
+Replay complete: 59061 successful, 939 failed, 0 skipped out of 0 total transfers
+EPR STATS successes=59061 steady_goodput=491.6 whole_goodput=491.3 lat_ms_p50=121.3 lat_ms_p90=200.4 lat_ms_p99=386.8 lat_ms_mean=126.7
+GOODPUT label=lk_sb0.8_ng_r500 processed=59943/60000 success=59004 failed=939 elapsed_s=120.0 goodput_tps=491.7
+== lk_sb0.8_ng_r750 exit=0
+Replay complete: 59062 successful, 938 failed, 0 skipped out of 0 total transfers
+EPR STATS successes=59062 steady_goodput=737.3 whole_goodput=736.2 lat_ms_p50=89.6 lat_ms_p90=141.5 lat_ms_p99=274.4 lat_ms_mean=95.8
+GOODPUT label=lk_sb0.8_ng_r750 processed=59982/60000 success=59044 failed=938 elapsed_s=80.0 goodput_tps=738.0
+== lk_usdc_fifo_r100 exit=0
+Replay complete: 11649 successful, 351 failed, 0 skipped out of 0 total transfers
+EPR STATS successes=11649 steady_goodput=96.8 whole_goodput=91.5 lat_ms_p50=296.1 lat_ms_p90=1343.7 lat_ms_p99=7106.3 lat_ms_mean=696.2
+GOODPUT label=lk_usdc_fifo_r100 processed=11992/151045 success=11642 failed=350 elapsed_s=126.0 goodput_tps=92.4
+== lk_usdc_fifo_r250 exit=124
+GOODPUT label=lk_usdc_fifo_r250 processed=9473/151045 success=9219 failed=254 elapsed_s=60.0 goodput_tps=153.6
+COLLAPSE lk_usdc_fifo at r=250
+== lk_z0.99_ro_r100 exit=1
+GOODPUT label=lk_z0.99_ro_r100 processed=9501/60000 success=8362 failed=1139 elapsed_s=96.0 goodput_tps=87.1
+COLLAPSE lk_z0.99_ro at r=100
+== lk_z0.99_fifo_r100 exit=1
+GOODPUT label=lk_z0.99_fifo_r100 processed=5574/60000 success=5149 failed=425 elapsed_s=94.0 goodput_tps=54.8
+COLLAPSE lk_z0.99_fifo at r=100
+== lk_z0.99_rxo_r100 exit=0
+Replay complete: 12000 successful, 0 failed, 0 skipped out of 0 total transfers
+EPR STATS successes=12000 steady_goodput=99.9 whole_goodput=100.0 lat_ms_p50=123.9 lat_ms_p90=204.4 lat_ms_p99=225.3 lat_ms_mean=123.9
+GOODPUT label=lk_z0.99_rxo_r100 processed=11981/60000 success=11981 failed=0 elapsed_s=120.0 goodput_tps=99.8
+== lk_z0.99_rxo_r250 exit=0
+Replay complete: 30000 successful, 0 failed, 0 skipped out of 0 total transfers
+EPR STATS successes=30000 steady_goodput=250.2 whole_goodput=249.9 lat_ms_p50=155.2 lat_ms_p90=235.6 lat_ms_p99=259.8 lat_ms_mean=155.2
+GOODPUT label=lk_z0.99_rxo_r250 processed=29969/60000 success=29969 failed=0 elapsed_s=120.0 goodput_tps=249.7
+== lk_z0.99_rxo_r500 exit=1
+GOODPUT label=lk_z0.99_rxo_r500 processed=55669/60000 success=55669 failed=0 elapsed_s=112.0 goodput_tps=497.0
+COLLAPSE lk_z0.99_rxo at r=500
+== lk_z0.8_fifo_r100 exit=0
+Replay complete: 11778 successful, 222 failed, 0 skipped out of 0 total transfers
+EPR STATS successes=11778 steady_goodput=97.8 whole_goodput=92.7 lat_ms_p50=201.5 lat_ms_p90=447.8 lat_ms_p99=7388.5 lat_ms_mean=438.0
+GOODPUT label=lk_z0.8_fifo_r100 processed=11993/60000 success=11771 failed=222 elapsed_s=126.0 goodput_tps=93.4
+== lk_z0.8_fifo_r250 exit=1
+GOODPUT label=lk_z0.8_fifo_r250 processed=10524/60000 success=10257 failed=267 elapsed_s=52.0 goodput_tps=197.2
+COLLAPSE lk_z0.8_fifo at r=250
+PHASE24_DONE
